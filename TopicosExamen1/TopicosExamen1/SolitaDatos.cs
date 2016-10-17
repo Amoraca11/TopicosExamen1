@@ -21,7 +21,5 @@ namespace TopicosExamen1
         {
             this.Close();
         }
-
-      
     }
 }
