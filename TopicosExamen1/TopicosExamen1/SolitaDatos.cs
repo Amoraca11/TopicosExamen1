@@ -21,10 +21,5 @@ namespace TopicosExamen1
         {
             this.Close();
         }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
