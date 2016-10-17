@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace TopicosExamen1
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-
+            SolitaDatos frm = new SolitaDatos();
+            frm.Show();
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -45,6 +46,11 @@ namespace TopicosExamen1
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
