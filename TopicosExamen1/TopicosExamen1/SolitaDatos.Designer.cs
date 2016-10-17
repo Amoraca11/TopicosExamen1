@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TopicosExamen1
+﻿namespace TopicosExamen1
 {
     partial class SolitaDatos
     {
@@ -70,7 +68,6 @@ namespace TopicosExamen1
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
-            comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -153,11 +150,6 @@ namespace TopicosExamen1
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
