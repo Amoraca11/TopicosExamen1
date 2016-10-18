@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace LogicaDeNegocio
 {
-    public class Usuario
+    class Metodos
     {
-        string nombre;
-        int id;
-        int[] cartones;
+
     }
 }
