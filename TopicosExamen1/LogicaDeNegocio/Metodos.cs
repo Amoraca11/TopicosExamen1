@@ -10,5 +10,6 @@ namespace LogicaDeNegocio
     class Metodos
     {
 
+
     }
 }
