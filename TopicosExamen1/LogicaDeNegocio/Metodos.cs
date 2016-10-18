@@ -5,27 +5,40 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace LogicaDeNegocio
-{
-    public class Metodos
-    {
+namespace LogicaDeNegocio{
+
+
+    public class Metodos{
+
         public static void LlenaCartones() {
 
             int [,] matriz = new int[5, 5];
             Random obj = new Random();
-            for (int i = 0; i < matriz.GetLength(0); i++)
-            {//apertura for1
+            int[] array = new int[30];
+            int cont = 0;
 
-                for (int j = 0; j < matriz.GetLength(1); j++)
-                {//apertura for interno
+            for (int i = 0; i < matriz.GetLength(0); i++){//apertura for1
 
-                    matriz[i, j] = obj.Next(1, 100);  //asignado valores aleatorios entre 1 y 100
+                for (int j = 0; j < matriz.GetLength(1); j++) {//apertura for interno
+                    int numerorandom = obj.Next(1, 100);
 
-                  
+                    if (array.Contains(numerorandom)) {
 
-                    
+                        numerorandom = obj.Next(1, 100);
 
-                }//cierre for interno
+                    }  //if
+                   
+                    else{
+
+                        matriz[i, j] = numerorandom;//asignado valores aleatorios entre 1 y 100
+                        array[cont]= numerorandom;
+                        cont++;
+                    }
+
+
+
+
+                    }//cierre for interno
             }//cierre for1
 
 
