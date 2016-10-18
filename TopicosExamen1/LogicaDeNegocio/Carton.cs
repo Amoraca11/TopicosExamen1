@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicaDeNegocio
 {
-    class Carton
+    public class Carton
     {
         int idCarton;
         int[,] carton = new int[5, 5];

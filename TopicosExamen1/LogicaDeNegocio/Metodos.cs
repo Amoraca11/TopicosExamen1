@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LogicaDeNegocio
 {
-    class Metodos
+    public class Metodos
     {
         public static void LlenaCartones() {
 
