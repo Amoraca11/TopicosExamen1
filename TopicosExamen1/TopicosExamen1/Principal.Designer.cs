@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            this.tabBingo = new System.Windows.Forms.TabControl();
+            this.tabModalidad = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,20 +49,27 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tabBingo.SuspendLayout();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNombreModalidad = new System.Windows.Forms.TextBox();
+            this.btnAgregaModalidad = new System.Windows.Forms.Button();
+            this.tableNuevoCarton = new System.Windows.Forms.TableLayoutPanel();
+            this.tabModalidad.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabBingo
+            // tabModalidad
             // 
-            this.tabBingo.Controls.Add(this.tabPage1);
-            this.tabBingo.Controls.Add(this.tabPage2);
-            this.tabBingo.Location = new System.Drawing.Point(2, 2);
-            this.tabBingo.Name = "tabBingo";
-            this.tabBingo.SelectedIndex = 0;
-            this.tabBingo.Size = new System.Drawing.Size(887, 402);
-            this.tabBingo.TabIndex = 0;
+            this.tabModalidad.Controls.Add(this.tabPage1);
+            this.tabModalidad.Controls.Add(this.tabPage2);
+            this.tabModalidad.Controls.Add(this.tabPage3);
+            this.tabModalidad.Location = new System.Drawing.Point(2, 2);
+            this.tabModalidad.Name = "tabModalidad";
+            this.tabModalidad.SelectedIndex = 0;
+            this.tabModalidad.Size = new System.Drawing.Size(887, 402);
+            this.tabModalidad.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -112,7 +119,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(394, 167);
+            this.btnExit.Location = new System.Drawing.Point(394, 188);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 10;
@@ -280,26 +287,91 @@
             this.label4.Text = "Nombre de usuario";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.label11);
+            this.tabPage3.Controls.Add(this.txtNombreModalidad);
+            this.tabPage3.Controls.Add(this.btnAgregaModalidad);
+            this.tabPage3.Controls.Add(this.tableNuevoCarton);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(879, 376);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Agrega Modalidad";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(349, 32);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(104, 16);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Nombre Juego :";
+            // 
+            // txtNombreModalidad
+            // 
+            this.txtNombreModalidad.Location = new System.Drawing.Point(470, 31);
+            this.txtNombreModalidad.Name = "txtNombreModalidad";
+            this.txtNombreModalidad.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreModalidad.TabIndex = 2;
+            // 
+            // btnAgregaModalidad
+            // 
+            this.btnAgregaModalidad.Location = new System.Drawing.Point(443, 284);
+            this.btnAgregaModalidad.Name = "btnAgregaModalidad";
+            this.btnAgregaModalidad.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregaModalidad.TabIndex = 1;
+            this.btnAgregaModalidad.Text = "Agregar";
+            this.btnAgregaModalidad.UseVisualStyleBackColor = true;
+            this.btnAgregaModalidad.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // tableNuevoCarton
+            // 
+            this.tableNuevoCarton.BackColor = System.Drawing.Color.Transparent;
+            this.tableNuevoCarton.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.tableNuevoCarton.ColumnCount = 5;
+            this.tableNuevoCarton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableNuevoCarton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableNuevoCarton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableNuevoCarton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableNuevoCarton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableNuevoCarton.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tableNuevoCarton.Location = new System.Drawing.Point(374, 78);
+            this.tableNuevoCarton.Name = "tableNuevoCarton";
+            this.tableNuevoCarton.RowCount = 5;
+            this.tableNuevoCarton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableNuevoCarton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableNuevoCarton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableNuevoCarton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableNuevoCarton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableNuevoCarton.Size = new System.Drawing.Size(238, 149);
+            this.tableNuevoCarton.TabIndex = 0;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 408);
-            this.Controls.Add(this.tabBingo);
+            this.Controls.Add(this.tabModalidad);
             this.Name = "Principal";
             this.Text = "Form1";
-            this.tabBingo.ResumeLayout(false);
+            this.tabModalidad.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabBingo;
+        private System.Windows.Forms.TabControl tabModalidad;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -319,6 +391,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TableLayoutPanel tableNuevoCarton;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtNombreModalidad;
+        private System.Windows.Forms.Button btnAgregaModalidad;
     }
 }
 

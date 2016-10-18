@@ -13,6 +13,8 @@ namespace LogicaDeNegocio
 
             int [,] matriz = new int[5, 5];
             Random obj = new Random();
+            int[] array = new int[0];
+
             for (int i = 0; i < matriz.GetLength(0); i++)
             {//apertura for1
 
@@ -21,7 +23,10 @@ namespace LogicaDeNegocio
 
                     matriz[i, j] = obj.Next(1, 100);  //asignado valores aleatorios entre 1 y 100
 
-                  
+                    while (array.Contains(obj.Next(1,100)))
+                    {
+
+                    }
 
                     
 
@@ -29,6 +34,10 @@ namespace LogicaDeNegocio
             }//cierre for1
 
 
+
+        }
+
+        public static void AgregaModalidad(string nombre, Carton nuevoCarton) {
 
         }
 

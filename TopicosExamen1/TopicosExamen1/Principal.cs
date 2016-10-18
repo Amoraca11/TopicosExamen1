@@ -58,5 +58,18 @@ namespace TopicosExamen1
             LogicaDeNegocio.Metodos.LlenaCartones();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabModalidad.Enabled = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //byte[,] matriz= new byte [5,5];
+            LogicaDeNegocio.Carton carton = new LogicaDeNegocio.Carton();
+             
+            LogicaDeNegocio.Metodos.AgregaModalidad(txtNombreModalidad.Text,carton );
+        }
     }
 }
