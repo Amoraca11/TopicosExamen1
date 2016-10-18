@@ -23,6 +23,74 @@ namespace TopicosExamen1
             frm.Show();
         }
 
+        private DataGridViewTextBoxColumn setDGVTextColumn(int letterIndex)
+        {
+            String letter = "";
+            if
+            (letterIndex == 0) letter = "B";
+            else
+            if (letterIndex == 1) letter = "I";
+            else
+            if (letterIndex == 2) letter = "N";
+            else
+            if (letterIndex == 3) letter = "G";
+            else
+            if (letterIndex == 4) letter = "O";
+
+            DataGridViewTextBoxColumn columnHeader = new DataGridViewTextBoxColumn();
+            columnHeader.HeaderText = letter;
+            columnHeader.Name = "Letter" + letter;
+            columnHeader.ReadOnly = true;
+            return columnHeader;
+        }
+
+        private void CreateGrid()
+        {
+
+            DataGridView vista = new DataGridView();
+
+            vista.AllowUserToAddRows = false;
+            vista.AllowUserToDeleteRows = false;
+            vista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            vista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+                setDGVTextColumn(0), setDGVTextColumn(1),setDGVTextColumn(2),setDGVTextColumn(3),setDGVTextColumn(4),});
+            vista.Location = new System.Drawing.Point(420, 30);
+            vista.Name = "gvUserBoard";
+            vista.ReadOnly = true;
+            vista.Size = new System.Drawing.Size(380, 300);
+            vista.TabIndex = 0;
+            vista.RowHeadersVisible = false;
+
+            int B = 1, I = 6, N = 11, G = 16, O = 21;
+
+            for (int p = 0; p < 5; p++)
+            {
+                string[] row = new string[] { B.ToString(), I.ToString(), N.ToString(), G.ToString(), O.ToString() };
+                vista.Rows.Add(row);
+                B++; I++; N++; G++; O++;
+            }
+
+            //vista.RowTemplate.MinimumHeight = 175;
+
+            foreach (DataGridViewRow row in vista.Rows)
+            {
+                row.Height = 55;
+            }
+
+            for (int a = 0; a < 5; a++)
+            {
+                DataGridViewColumn column = vista.Columns[a];
+                column.Width = 75;
+                vista.Columns[a].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                vista.Columns[a].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+
+
+
+            tabPage2.Controls.Add(vista);
+
+        }
+
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
@@ -56,6 +124,7 @@ namespace TopicosExamen1
         private void button1_Click(object sender, EventArgs e)
         {
             LogicaDeNegocio.Metodos.LlenaCartones();
+            CreateGrid();
 
         }
 
@@ -70,6 +139,8 @@ namespace TopicosExamen1
             LogicaDeNegocio.Carton carton = new LogicaDeNegocio.Carton();
              
             LogicaDeNegocio.Metodos.AgregaModalidad(txtNombreModalidad.Text,carton );
+
+            
         }
     }
 }
