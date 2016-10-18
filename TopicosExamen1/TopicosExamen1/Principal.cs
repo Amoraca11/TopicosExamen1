@@ -70,7 +70,7 @@ namespace TopicosExamen1
                 B++; I++; N++; G++; O++;
             }
 
-            //vista.RowTemplate.MinimumHeight = 175;
+            //vista.RowTemplate.MinimumHeight = 175
 
             foreach (DataGridViewRow row in vista.Rows)
             {
