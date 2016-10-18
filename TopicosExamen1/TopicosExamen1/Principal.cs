@@ -70,6 +70,12 @@ namespace TopicosExamen1
                 B++; I++; N++; G++; O++;
             }
 
+            int[,] bingMatriz = new int[5,5];
+            bingMatriz[0, 0] = 0;
+            vista.Rows[2].Cells[2].Value = "BINGO";
+
+            LogicaDeNegocio.Metodos.CartonLetraR(vista);
+
             //vista.RowTemplate.MinimumHeight = 175
 
             foreach (DataGridViewRow row in vista.Rows)
