@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopicosExamen1", "TopicosExamen1\TopicosExamen1.csproj", "{14A6B1AC-B220-4929-930E-AF5BFE031929}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "TopicosExamen1\Presentacion.csproj", "{14A6B1AC-B220-4929-930E-AF5BFE031929}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaDeNegocio", "LogicaDeNegocio\LogicaDeNegocio.csproj", "{B0F3B5F5-4864-44EF-B8EF-1B13A1BE980A}"
 EndProject
