@@ -45,6 +45,14 @@ namespace LogicaDeNegocio{
 
         }
 
-
+        /// <summary>
+        /// agrega una modalidad de juego a los ya puestos en el juego de bingo
+        /// </summary>
+        /// <param name="nombre">el nombre que recibira la nueva modalidad</param>
+        /// <param name="carton">matriz con el machote del nuevo juego</param>
+        public static void AgregaModalidad(string nombre, Carton carton)
+        {
+         
+        }
     }
 }
