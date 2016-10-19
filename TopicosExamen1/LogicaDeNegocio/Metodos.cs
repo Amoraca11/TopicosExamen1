@@ -10,6 +10,10 @@ namespace LogicaDeNegocio{
 
 
     public class Metodos{
+
+        public static int[] arrayNumeros = new int[75];
+        public static int cont1 = 0;
+
         public static void AcomodaNum( int x, int y)
         {
             
@@ -109,41 +113,39 @@ namespace LogicaDeNegocio{
         {
             
             Random obj = new Random();
-            int[] array = new int[y];
+           // int[] array = new int[y];
             
              
-            for (int i = 0; i < array.GetLength(0); i++)
-            {//apertura for1
-
-
                 int numerorandom = obj.Next(x, y+1);
 
-                if (array.Contains(numerorandom))
+                if (arrayNumeros.Contains(numerorandom))
                 {
 
                     numerorandom = obj.Next(x, y+1);
-                    while (array.Contains(numerorandom))
+                    while (arrayNumeros.Contains(numerorandom))
                     {
 
                         numerorandom = obj.Next(x, y+1);
                     }
-                    array[i] = numerorandom;
+                    arrayNumeros[cont1] = numerorandom;
                    // Console.WriteLine("El numero que ha salido es " + numerorandom);
                     MessageBox.Show("El numero que ha salido es " + numerorandom);
+                cont1++;
 
 
                 }  //if
 
-                else if (!array.Contains(numerorandom))
+                else if (!arrayNumeros.Contains(numerorandom))
                 {
 
-                    array[i] = numerorandom;
+                    arrayNumeros[cont1] = numerorandom;
                    // Console.WriteLine("El numero que ha salido es " + numerorandom);
                     MessageBox.Show("El numero que ha salido es " + numerorandom);
-                }
+                cont1++;
+            }
 
 
-            }//cierre for
+         
 
         }
 
