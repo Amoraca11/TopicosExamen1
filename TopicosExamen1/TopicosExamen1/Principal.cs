@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static TopicosExamen1.SolitaDatos;
 
 namespace TopicosExamen1
 {
@@ -129,8 +130,13 @@ namespace TopicosExamen1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LogicaDeNegocio.Metodos.LlenaCartones();
-            CreateGrid();
+            //LogicaDeNegocio.Metodos.LlenaCartones();
+            //CreateGrid();
+            string text = ControlID.TextData;
+            string text1 = ControlID1.TextData1;
+            int primerNum = int.Parse(text);
+            int segundoNum = int.Parse(text1);
+            LogicaDeNegocio.Metodos.SacaNumeros(primerNum,segundoNum);
 
         }
 

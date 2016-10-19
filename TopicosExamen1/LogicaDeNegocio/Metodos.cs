@@ -10,7 +10,7 @@ namespace LogicaDeNegocio{
 
 
     public class Metodos{
-
+        
         public static void LlenaCartones() {
 
             int [,] matriz = new int[5, 5];
@@ -21,21 +21,32 @@ namespace LogicaDeNegocio{
             for (int i = 0; i < matriz.GetLength(0); i++){//apertura for1
 
                 for (int j = 0; j < matriz.GetLength(1); j++) {//apertura for interno
-                    int numerorandom = obj.Next(1, 100);
+                    int numerorandom = obj.Next(1, 35);
 
-                    if (array.Contains(numerorandom)) {
+                    if (array.Contains(numerorandom))
+                    {
 
-                        numerorandom = obj.Next(1, 100);
+                        numerorandom = obj.Next(1, 35);
+                        while (array.Contains(numerorandom))
+                        {
+
+                            numerorandom = obj.Next(1, 35);
+                        }
+                        matriz[i, j] = numerorandom;//asignado valores aleatorios entre 1 y 100
+                        array[cont] = numerorandom;
+                        cont++;
 
                     }  //if
-                   
-                    else{
+
+                    else if (!array.Contains(numerorandom))
+                    {
 
                         matriz[i, j] = numerorandom;//asignado valores aleatorios entre 1 y 100
-                        array[cont]= numerorandom;
+                        array[cont] = numerorandom;
                         cont++;
                     }
 
+                
 
 
 
@@ -43,6 +54,47 @@ namespace LogicaDeNegocio{
             }//cierre for1
 
 
+
+        }
+        public static void SacaNumeros(int x, int y)
+        {
+            
+            Random obj = new Random();
+            int[] array = new int[y];
+            
+             
+            for (int i = 0; i < array.GetLength(0); i++)
+            {//apertura for1
+
+
+                int numerorandom = obj.Next(x, y+1);
+
+                if (array.Contains(numerorandom))
+                {
+
+                    numerorandom = obj.Next(x, y+1);
+                    while (array.Contains(numerorandom))
+                    {
+
+                        numerorandom = obj.Next(x, y+1);
+                    }
+                    array[i] = numerorandom;
+                   // Console.WriteLine("El numero que ha salido es " + numerorandom);
+                    MessageBox.Show("El numero que ha salido es " + numerorandom);
+
+
+                }  //if
+
+                else if (!array.Contains(numerorandom))
+                {
+
+                    array[i] = numerorandom;
+                   // Console.WriteLine("El numero que ha salido es " + numerorandom);
+                    MessageBox.Show("El numero que ha salido es " + numerorandom);
+                }
+
+
+            }//cierre for
 
         }
 
