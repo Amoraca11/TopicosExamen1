@@ -154,5 +154,14 @@ namespace TopicosExamen1
 
             
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string text = ControlID.TextData;
+            string text1 = ControlID1.TextData1;
+            int primerNum = int.Parse(text);
+            int segundoNum = int.Parse(text1);
+            LogicaDeNegocio.Metodos.AcomodaNum(primerNum,segundoNum);
+        }
     }
 }

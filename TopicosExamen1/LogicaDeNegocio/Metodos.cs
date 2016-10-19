@@ -10,7 +10,56 @@ namespace LogicaDeNegocio{
 
 
     public class Metodos{
-        
+        public static void AcomodaNum( int x, int y)
+        {
+            
+             int valor = y/5;
+            int inicial = y / 5;
+            int[,] matriz = new int[5, 5];
+            Random obj = new Random();
+            int[] array = new int[30];
+            int cont = 0;
+            int i = 0;
+            int j = 0;
+
+            for (i = 0; i < matriz.GetLength(0); i++)
+            {
+                for ( j = 0; j < matriz.GetLength(0); j++)
+                {
+                    int numerorandom = obj.Next(x, valor+1);
+                    if (array.Contains(numerorandom))
+                    {
+
+                        numerorandom = obj.Next(x,valor+1);
+
+                        while (array.Contains(numerorandom))
+                        {
+
+                            numerorandom = obj.Next(x, valor+1);
+                        }
+                        matriz[j, i] = numerorandom;//asignado valores aleatorios entre 1 y 100
+                        array[cont] = numerorandom;
+                        cont++;
+
+                    }  //if
+
+                    else if (!array.Contains(numerorandom))
+                    {
+
+                        matriz[j, i] = numerorandom;//asignado valores aleatorios entre 1 y 100
+                        array[cont] = numerorandom;
+                        cont++;
+                    }
+
+
+                }//primerfor
+
+                x = x + inicial;
+                valor = valor + inicial;
+             
+
+            }//segundofor
+        }
         public static void LlenaCartones() {
 
             int [,] matriz = new int[5, 5];

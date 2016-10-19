@@ -48,6 +48,7 @@
             this.txtNombreModalidad = new System.Windows.Forms.TextBox();
             this.btnAgregaModalidad = new System.Windows.Forms.Button();
             this.tableNuevoCarton = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabModalidad.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -67,6 +68,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.listNumbers);
@@ -267,6 +269,16 @@
             this.tableNuevoCarton.Size = new System.Drawing.Size(238, 149);
             this.tableNuevoCarton.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(357, 247);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Prueba AcomodaNum";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,6 +319,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtNombreModalidad;
         private System.Windows.Forms.Button btnAgregaModalidad;
+        private System.Windows.Forms.Button button2;
     }
 }
 
