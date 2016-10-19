@@ -14,17 +14,46 @@ namespace LogicaDeNegocio{
         public static int[] arrayNumeros = new int[75];
         public static int cont1 = 0;
 
+        public static void imprimeMatriz(int [,] matrizPrint ) {
+
+
+            for (int i = 0; i < matrizPrint.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrizPrint.GetLength(0); j++)
+                {
+                    Console.Write( matrizPrint[i, j].ToString()+" ");
+                }
+                Console.WriteLine("");
+            }
+        }
+
         public static void AcomodaNum( int x, int y)
         {
-            
-             int valor = y/5;
-            int inicial = y / 5;
+            int valor;
+            int inicial;
             int[,] matriz = new int[5, 5];
             Random obj = new Random();
             int[] array = new int[30];
             int cont = 0;
             int i = 0;
             int j = 0;
+            bool mas1 = false;
+
+
+            if (x != 1)
+           {
+                inicial = (y - x) / 5;
+                valor = x+inicial;
+                mas1 = true;
+                
+
+            }
+            else
+            {
+                 valor = y / 5;
+                 inicial = y / 5;
+            }
+            
 
             for (i = 0; i < matriz.GetLength(0); i++)
             {
@@ -58,11 +87,17 @@ namespace LogicaDeNegocio{
 
                 }//primerfor
 
+                if (mas1) {
+
+                    x++;
+                    mas1 = false;
+                }
                 x = x + inicial;
                 valor = valor + inicial;
              
 
             }//segundofor
+            imprimeMatriz(matriz);
         }
         public static void LlenaCartones() {
 
@@ -111,42 +146,46 @@ namespace LogicaDeNegocio{
         }
         public static void SacaNumeros(int x, int y)
         {
-            
-            Random obj = new Random();
-           // int[] array = new int[y];
-            
-             
-                int numerorandom = obj.Next(x, y+1);
 
-                if (arrayNumeros.Contains(numerorandom))
+            Random obj = new Random();
+            // int[] array = new int[y];
+
+            if(cont1< y){ 
+
+            int numerorandom = obj.Next(x, y + 1);
+
+            if (arrayNumeros.Contains(numerorandom))
+            {
+
+                numerorandom = obj.Next(x, y + 1);
+                while (arrayNumeros.Contains(numerorandom))
                 {
 
-                    numerorandom = obj.Next(x, y+1);
-                    while (arrayNumeros.Contains(numerorandom))
-                    {
-
-                        numerorandom = obj.Next(x, y+1);
-                    }
-                    arrayNumeros[cont1] = numerorandom;
-                   // Console.WriteLine("El numero que ha salido es " + numerorandom);
-                    MessageBox.Show("El numero que ha salido es " + numerorandom);
+                    numerorandom = obj.Next(x, y + 1);
+                }
+                arrayNumeros[cont1] = numerorandom;
+                // Console.WriteLine("El numero que ha salido es " + numerorandom);
+                MessageBox.Show("El numero que ha salido es " + numerorandom);
                 cont1++;
 
 
-                }  //if
+            }  //if
 
-                else if (!arrayNumeros.Contains(numerorandom))
-                {
+            else if (!arrayNumeros.Contains(numerorandom))
+            {
 
-                    arrayNumeros[cont1] = numerorandom;
-                   // Console.WriteLine("El numero que ha salido es " + numerorandom);
-                    MessageBox.Show("El numero que ha salido es " + numerorandom);
+                arrayNumeros[cont1] = numerorandom;
+                // Console.WriteLine("El numero que ha salido es " + numerorandom);
+                MessageBox.Show("El numero que ha salido es " + numerorandom);
                 cont1++;
             }
 
 
-         
 
+        }
+            else { MessageBox.Show("Han salido todos los numeros gracias por jugar");  }
+          
+           
         }
 
         /// <summary>
