@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.tabModalidad = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listNumbers = new System.Windows.Forms.ListBox();
@@ -44,11 +45,35 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txt44 = new System.Windows.Forms.TextBox();
+            this.txt43 = new System.Windows.Forms.TextBox();
+            this.txt42 = new System.Windows.Forms.TextBox();
+            this.txt33 = new System.Windows.Forms.TextBox();
+            this.txt31 = new System.Windows.Forms.TextBox();
+            this.txt41 = new System.Windows.Forms.TextBox();
+            this.txt40 = new System.Windows.Forms.TextBox();
+            this.txt34 = new System.Windows.Forms.TextBox();
+            this.txt30 = new System.Windows.Forms.TextBox();
+            this.txt32 = new System.Windows.Forms.TextBox();
+            this.txt24 = new System.Windows.Forms.TextBox();
+            this.txt23 = new System.Windows.Forms.TextBox();
+            this.txt22 = new System.Windows.Forms.TextBox();
+            this.txt21 = new System.Windows.Forms.TextBox();
+            this.txt20 = new System.Windows.Forms.TextBox();
+            this.txt14 = new System.Windows.Forms.TextBox();
+            this.txt13 = new System.Windows.Forms.TextBox();
+            this.txt12 = new System.Windows.Forms.TextBox();
+            this.txt11 = new System.Windows.Forms.TextBox();
+            this.txt10 = new System.Windows.Forms.TextBox();
+            this.txt04 = new System.Windows.Forms.TextBox();
+            this.txt03 = new System.Windows.Forms.TextBox();
+            this.txt02 = new System.Windows.Forms.TextBox();
+            this.txt01 = new System.Windows.Forms.TextBox();
+            this.txt00 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtNombreModalidad = new System.Windows.Forms.TextBox();
             this.btnAgregaModalidad = new System.Windows.Forms.Button();
             this.tableNuevoCarton = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabModalidad.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -84,6 +109,15 @@
             this.tabPage1.Text = "Jugar";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(357, 247);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Prueba AcomodaNum";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -208,6 +242,31 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.txt44);
+            this.tabPage3.Controls.Add(this.txt43);
+            this.tabPage3.Controls.Add(this.txt42);
+            this.tabPage3.Controls.Add(this.txt33);
+            this.tabPage3.Controls.Add(this.txt31);
+            this.tabPage3.Controls.Add(this.txt41);
+            this.tabPage3.Controls.Add(this.txt40);
+            this.tabPage3.Controls.Add(this.txt34);
+            this.tabPage3.Controls.Add(this.txt30);
+            this.tabPage3.Controls.Add(this.txt32);
+            this.tabPage3.Controls.Add(this.txt24);
+            this.tabPage3.Controls.Add(this.txt23);
+            this.tabPage3.Controls.Add(this.txt22);
+            this.tabPage3.Controls.Add(this.txt21);
+            this.tabPage3.Controls.Add(this.txt20);
+            this.tabPage3.Controls.Add(this.txt14);
+            this.tabPage3.Controls.Add(this.txt13);
+            this.tabPage3.Controls.Add(this.txt12);
+            this.tabPage3.Controls.Add(this.txt11);
+            this.tabPage3.Controls.Add(this.txt10);
+            this.tabPage3.Controls.Add(this.txt04);
+            this.tabPage3.Controls.Add(this.txt03);
+            this.tabPage3.Controls.Add(this.txt02);
+            this.tabPage3.Controls.Add(this.txt01);
+            this.tabPage3.Controls.Add(this.txt00);
             this.tabPage3.Controls.Add(this.label11);
             this.tabPage3.Controls.Add(this.txtNombreModalidad);
             this.tabPage3.Controls.Add(this.btnAgregaModalidad);
@@ -219,12 +278,190 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Agrega Modalidad";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // txt44
+            // 
+            this.txt44.Location = new System.Drawing.Point(308, 196);
+            this.txt44.Name = "txt44";
+            this.txt44.Size = new System.Drawing.Size(23, 20);
+            this.txt44.TabIndex = 28;
+            // 
+            // txt43
+            // 
+            this.txt43.Location = new System.Drawing.Point(280, 196);
+            this.txt43.Name = "txt43";
+            this.txt43.Size = new System.Drawing.Size(22, 20);
+            this.txt43.TabIndex = 27;
+            // 
+            // txt42
+            // 
+            this.txt42.Location = new System.Drawing.Point(249, 196);
+            this.txt42.Name = "txt42";
+            this.txt42.Size = new System.Drawing.Size(25, 20);
+            this.txt42.TabIndex = 26;
+            // 
+            // txt33
+            // 
+            this.txt33.Location = new System.Drawing.Point(280, 170);
+            this.txt33.Name = "txt33";
+            this.txt33.Size = new System.Drawing.Size(22, 20);
+            this.txt33.TabIndex = 25;
+            // 
+            // txt31
+            // 
+            this.txt31.Location = new System.Drawing.Point(219, 170);
+            this.txt31.Name = "txt31";
+            this.txt31.Size = new System.Drawing.Size(24, 20);
+            this.txt31.TabIndex = 24;
+            // 
+            // txt41
+            // 
+            this.txt41.Location = new System.Drawing.Point(219, 196);
+            this.txt41.Name = "txt41";
+            this.txt41.Size = new System.Drawing.Size(24, 20);
+            this.txt41.TabIndex = 23;
+            // 
+            // txt40
+            // 
+            this.txt40.Location = new System.Drawing.Point(187, 196);
+            this.txt40.Name = "txt40";
+            this.txt40.Size = new System.Drawing.Size(26, 20);
+            this.txt40.TabIndex = 22;
+            // 
+            // txt34
+            // 
+            this.txt34.Location = new System.Drawing.Point(308, 170);
+            this.txt34.Name = "txt34";
+            this.txt34.Size = new System.Drawing.Size(23, 20);
+            this.txt34.TabIndex = 21;
+            // 
+            // txt30
+            // 
+            this.txt30.Location = new System.Drawing.Point(187, 170);
+            this.txt30.Name = "txt30";
+            this.txt30.Size = new System.Drawing.Size(26, 20);
+            this.txt30.TabIndex = 20;
+            // 
+            // txt32
+            // 
+            this.txt32.Location = new System.Drawing.Point(249, 170);
+            this.txt32.Name = "txt32";
+            this.txt32.Size = new System.Drawing.Size(25, 20);
+            this.txt32.TabIndex = 19;
+            // 
+            // txt24
+            // 
+            this.txt24.Location = new System.Drawing.Point(309, 143);
+            this.txt24.Name = "txt24";
+            this.txt24.Size = new System.Drawing.Size(22, 20);
+            this.txt24.TabIndex = 18;
+            // 
+            // txt23
+            // 
+            this.txt23.Location = new System.Drawing.Point(280, 143);
+            this.txt23.Name = "txt23";
+            this.txt23.Size = new System.Drawing.Size(22, 20);
+            this.txt23.TabIndex = 17;
+            // 
+            // txt22
+            // 
+            this.txt22.Location = new System.Drawing.Point(249, 142);
+            this.txt22.Name = "txt22";
+            this.txt22.Size = new System.Drawing.Size(25, 20);
+            this.txt22.TabIndex = 16;
+            this.txt22.Text = "X";
+            this.txt22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt21
+            // 
+            this.txt21.Location = new System.Drawing.Point(219, 143);
+            this.txt21.Name = "txt21";
+            this.txt21.Size = new System.Drawing.Size(24, 20);
+            this.txt21.TabIndex = 15;
+            // 
+            // txt20
+            // 
+            this.txt20.Location = new System.Drawing.Point(187, 144);
+            this.txt20.Name = "txt20";
+            this.txt20.Size = new System.Drawing.Size(26, 20);
+            this.txt20.TabIndex = 14;
+            // 
+            // txt14
+            // 
+            this.txt14.Location = new System.Drawing.Point(309, 116);
+            this.txt14.Name = "txt14";
+            this.txt14.Size = new System.Drawing.Size(22, 20);
+            this.txt14.TabIndex = 13;
+            // 
+            // txt13
+            // 
+            this.txt13.Location = new System.Drawing.Point(280, 116);
+            this.txt13.Name = "txt13";
+            this.txt13.Size = new System.Drawing.Size(22, 20);
+            this.txt13.TabIndex = 12;
+            // 
+            // txt12
+            // 
+            this.txt12.Location = new System.Drawing.Point(249, 116);
+            this.txt12.Name = "txt12";
+            this.txt12.Size = new System.Drawing.Size(25, 20);
+            this.txt12.TabIndex = 11;
+            // 
+            // txt11
+            // 
+            this.txt11.Location = new System.Drawing.Point(219, 117);
+            this.txt11.Name = "txt11";
+            this.txt11.Size = new System.Drawing.Size(24, 20);
+            this.txt11.TabIndex = 10;
+            // 
+            // txt10
+            // 
+            this.txt10.Location = new System.Drawing.Point(187, 117);
+            this.txt10.Name = "txt10";
+            this.txt10.Size = new System.Drawing.Size(26, 20);
+            this.txt10.TabIndex = 9;
+            // 
+            // txt04
+            // 
+            this.txt04.Location = new System.Drawing.Point(309, 90);
+            this.txt04.Name = "txt04";
+            this.txt04.Size = new System.Drawing.Size(22, 20);
+            this.txt04.TabIndex = 8;
+            // 
+            // txt03
+            // 
+            this.txt03.Location = new System.Drawing.Point(280, 90);
+            this.txt03.Name = "txt03";
+            this.txt03.Size = new System.Drawing.Size(22, 20);
+            this.txt03.TabIndex = 7;
+            // 
+            // txt02
+            // 
+            this.txt02.Location = new System.Drawing.Point(249, 90);
+            this.txt02.Name = "txt02";
+            this.txt02.Size = new System.Drawing.Size(25, 20);
+            this.txt02.TabIndex = 6;
+            // 
+            // txt01
+            // 
+            this.txt01.Location = new System.Drawing.Point(219, 91);
+            this.txt01.Name = "txt01";
+            this.txt01.Size = new System.Drawing.Size(24, 20);
+            this.txt01.TabIndex = 5;
+            // 
+            // txt00
+            // 
+            this.txt00.Location = new System.Drawing.Point(187, 91);
+            this.txt00.Name = "txt00";
+            this.txt00.Size = new System.Drawing.Size(26, 20);
+            this.txt00.TabIndex = 4;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(349, 32);
+            this.label11.Location = new System.Drawing.Point(236, 30);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(104, 16);
             this.label11.TabIndex = 3;
@@ -232,14 +469,14 @@
             // 
             // txtNombreModalidad
             // 
-            this.txtNombreModalidad.Location = new System.Drawing.Point(470, 31);
+            this.txtNombreModalidad.Location = new System.Drawing.Point(357, 29);
             this.txtNombreModalidad.Name = "txtNombreModalidad";
             this.txtNombreModalidad.Size = new System.Drawing.Size(100, 20);
             this.txtNombreModalidad.TabIndex = 2;
             // 
             // btnAgregaModalidad
             // 
-            this.btnAgregaModalidad.Location = new System.Drawing.Point(443, 284);
+            this.btnAgregaModalidad.Location = new System.Drawing.Point(331, 291);
             this.btnAgregaModalidad.Name = "btnAgregaModalidad";
             this.btnAgregaModalidad.Size = new System.Drawing.Size(75, 23);
             this.btnAgregaModalidad.TabIndex = 1;
@@ -258,7 +495,7 @@
             this.tableNuevoCarton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableNuevoCarton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableNuevoCarton.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tableNuevoCarton.Location = new System.Drawing.Point(374, 78);
+            this.tableNuevoCarton.Location = new System.Drawing.Point(374, 75);
             this.tableNuevoCarton.Name = "tableNuevoCarton";
             this.tableNuevoCarton.RowCount = 5;
             this.tableNuevoCarton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -266,18 +503,8 @@
             this.tableNuevoCarton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableNuevoCarton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableNuevoCarton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableNuevoCarton.Size = new System.Drawing.Size(238, 149);
+            this.tableNuevoCarton.Size = new System.Drawing.Size(238, 152);
             this.tableNuevoCarton.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(357, 247);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Prueba AcomodaNum";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Principal
             // 
@@ -320,6 +547,31 @@
         private System.Windows.Forms.TextBox txtNombreModalidad;
         private System.Windows.Forms.Button btnAgregaModalidad;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txt14;
+        private System.Windows.Forms.TextBox txt13;
+        private System.Windows.Forms.TextBox txt12;
+        private System.Windows.Forms.TextBox txt11;
+        private System.Windows.Forms.TextBox txt10;
+        private System.Windows.Forms.TextBox txt04;
+        private System.Windows.Forms.TextBox txt03;
+        private System.Windows.Forms.TextBox txt02;
+        private System.Windows.Forms.TextBox txt01;
+        private System.Windows.Forms.TextBox txt00;
+        private System.Windows.Forms.TextBox txt44;
+        private System.Windows.Forms.TextBox txt43;
+        private System.Windows.Forms.TextBox txt42;
+        private System.Windows.Forms.TextBox txt33;
+        private System.Windows.Forms.TextBox txt31;
+        private System.Windows.Forms.TextBox txt41;
+        private System.Windows.Forms.TextBox txt40;
+        private System.Windows.Forms.TextBox txt34;
+        private System.Windows.Forms.TextBox txt30;
+        private System.Windows.Forms.TextBox txt32;
+        private System.Windows.Forms.TextBox txt24;
+        private System.Windows.Forms.TextBox txt23;
+        private System.Windows.Forms.TextBox txt21;
+        private System.Windows.Forms.TextBox txt20;
+        protected System.Windows.Forms.TextBox txt22;
     }
 }
 

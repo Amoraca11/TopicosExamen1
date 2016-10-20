@@ -144,6 +144,7 @@ namespace LogicaDeNegocio{
 
 
         }
+
         public static string SacaNumeros(int x, int y)
         {
             string result = "";
@@ -190,13 +191,27 @@ namespace LogicaDeNegocio{
         }
 
         /// <summary>
-        /// agrega una modalidad de juego a los ya puestos en el juego de bingo
+        /// de mommento solo pinta lo que recibo de la matriz
         /// </summary>
         /// <param name="nombre">el nombre que recibira la nueva modalidad</param>
-        /// <param name="carton">matriz con el machote del nuevo juego</param>
-        public static void AgregaModalidad(string nombre, Carton carton)
+        /// <param name="arreglo">lista de lo que se lleno antes</param>
+        public static void AgregaModalidad(string nombre, string[] arreglo)
         {
-         
+            byte[,] matriz = new byte[5, 5];
+
+            int cont = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int l = 0; l < 5; l++)
+                {
+
+                   if (String.IsNullOrEmpty(arreglo[cont].ToString()))
+                        matriz[i, l] = 0;
+                    else
+                        matriz[i, l] = 1;
+                    cont++;
+                };
+            };
         }
 
         public static void CartonLleno(DataGridView matriz)

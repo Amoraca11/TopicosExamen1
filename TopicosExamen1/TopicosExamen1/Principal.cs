@@ -147,10 +147,13 @@ namespace TopicosExamen1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //byte[,] matriz= new byte [5,5];
-            LogicaDeNegocio.Carton carton = new LogicaDeNegocio.Carton();
+            
+            string[] arreglo = { txt00.Text, txt01.Text,txt02.Text,txt03.Text,txt04.Text,txt10.Text
+                    ,txt11.Text,txt12.Text,txt13.Text,txt14.Text,txt20.Text,txt21.Text,txt22.Text,txt23.Text
+                    ,txt24.Text,txt30.Text,txt31.Text,txt32.Text,txt33.Text,txt34.Text,txt40.Text,txt41.Text
+                    ,txt42.Text,txt43.Text,txt44.Text};
              
-            LogicaDeNegocio.Metodos.AgregaModalidad(txtNombreModalidad.Text,carton );
+            LogicaDeNegocio.Metodos.AgregaModalidad(txtNombreModalidad.Text, arreglo );
 
             
         }
@@ -162,6 +165,11 @@ namespace TopicosExamen1
             int primerNum = int.Parse(text);
             int segundoNum = int.Parse(text1);
             LogicaDeNegocio.Metodos.AcomodaNum(primerNum,segundoNum);
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
