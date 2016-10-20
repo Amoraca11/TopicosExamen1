@@ -37,7 +37,7 @@
             this.listNumbers = new System.Windows.Forms.ListBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGeneraNum = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -99,7 +99,7 @@
             this.tabPage1.Controls.Add(this.listNumbers);
             this.tabPage1.Controls.Add(this.btnExit);
             this.tabPage1.Controls.Add(this.btnNewGame);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btnGeneraNum);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -169,15 +169,15 @@
             this.btnNewGame.UseVisualStyleBackColor = true;
             this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
-            // button1
+            // btnGeneraNum
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(34, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 202);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnGeneraNum.Image = ((System.Drawing.Image)(resources.GetObject("btnGeneraNum.Image")));
+            this.btnGeneraNum.Location = new System.Drawing.Point(34, 77);
+            this.btnGeneraNum.Name = "btnGeneraNum";
+            this.btnGeneraNum.Size = new System.Drawing.Size(216, 202);
+            this.btnGeneraNum.TabIndex = 8;
+            this.btnGeneraNum.UseVisualStyleBackColor = true;
+            this.btnGeneraNum.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -535,7 +535,7 @@
         private System.Windows.Forms.ListBox listNumbers;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnNewGame;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGeneraNum;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label4;
