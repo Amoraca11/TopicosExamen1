@@ -17,6 +17,15 @@ namespace TopicosExamen1
             InitializeComponent();
         }
 
+        public static class ControlID
+        {
+            public static string TextData { get; set; }
+        }
+        public static class ControlID1
+        {
+            public static string TextData1 { get; set; }
+        }
+
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -31,6 +40,8 @@ namespace TopicosExamen1
         {
             Principal frm = new Principal();
             frm.Show();
+            ControlID.TextData = txtInf.Text;
+            ControlID1.TextData1 = txtSup.Text;
         }
     }
 }
