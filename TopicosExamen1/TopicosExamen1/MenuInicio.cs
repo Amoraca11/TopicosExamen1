@@ -40,8 +40,8 @@ namespace TopicosExamen1
         {
             Principal frm = new Principal();
             frm.Show();
-            ControlID.TextData = txtInf.Text;
-            ControlID1.TextData1 = txtSup.Text;
+           
         }
+
     }
 }
