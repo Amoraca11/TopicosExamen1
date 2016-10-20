@@ -165,8 +165,10 @@ namespace LogicaDeNegocio{
                     numerorandom = obj.Next(x, y + 1);
                 }
                 arrayNumeros[cont1] = numerorandom;
-                // Console.WriteLine("El numero que ha salido es " + numerorandom);
-                MessageBox.Show("El numero que ha salido es " + numerorandom);
+                    // Console.WriteLine("El numero que ha salido es " + numerorandom);
+                    //yusef
+                    result = "El numero que ha salido es " + numerorandom;// solo esto cambie
+                MessageBox.Show(result);
                 cont1++;
 
 
@@ -176,8 +178,9 @@ namespace LogicaDeNegocio{
             {
 
                 arrayNumeros[cont1] = numerorandom;
-                // Console.WriteLine("El numero que ha salido es " + numerorandom);
-                MessageBox.Show("El numero que ha salido es " + numerorandom);
+                    // Console.WriteLine("El numero que ha salido es " + numerorandom);
+                    result = "El numero que ha salido es " + numerorandom;
+                MessageBox.Show(result);//yusef: solo modifiue este mensaje
                 cont1++;
             }
 

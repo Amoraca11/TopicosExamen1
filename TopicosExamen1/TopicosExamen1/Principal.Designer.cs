@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.tabModalidad = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPruebaAcomodaNum = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listNumbers = new System.Windows.Forms.ListBox();
@@ -93,7 +93,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.btnPruebaAcomodaNum);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.listNumbers);
@@ -110,14 +110,15 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // button2
+            // btnPruebaAcomodaNum
             // 
-            this.button2.Location = new System.Drawing.Point(357, 247);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Prueba AcomodaNum";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPruebaAcomodaNum.Location = new System.Drawing.Point(357, 247);
+            this.btnPruebaAcomodaNum.Name = "btnPruebaAcomodaNum";
+            this.btnPruebaAcomodaNum.Size = new System.Drawing.Size(145, 23);
+            this.btnPruebaAcomodaNum.TabIndex = 14;
+            this.btnPruebaAcomodaNum.Text = "Prueba AcomodaNum";
+            this.btnPruebaAcomodaNum.UseVisualStyleBackColor = true;
+            this.btnPruebaAcomodaNum.Click += new System.EventHandler(this.button2_Click_2);
             // 
             // label3
             // 
@@ -546,7 +547,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtNombreModalidad;
         private System.Windows.Forms.Button btnAgregaModalidad;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPruebaAcomodaNum;
         private System.Windows.Forms.TextBox txt14;
         private System.Windows.Forms.TextBox txt13;
         private System.Windows.Forms.TextBox txt12;

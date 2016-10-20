@@ -132,11 +132,13 @@ namespace TopicosExamen1
         {
             //LogicaDeNegocio.Metodos.LlenaCartones();
             //CreateGrid();
+            //listNumbers.Items.Clear();
             string text = ControlID.TextData;
             string text1 = ControlID1.TextData1;
             int primerNum = int.Parse(text);
             int segundoNum = int.Parse(text1);
-            LogicaDeNegocio.Metodos.SacaNumeros(primerNum,segundoNum);
+            listNumbers.Items.Add(LogicaDeNegocio.Metodos.SacaNumeros(primerNum, segundoNum));
+            
 
         }
 
@@ -160,14 +162,21 @@ namespace TopicosExamen1
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            
             string text = ControlID.TextData;
             string text1 = ControlID1.TextData1;
             int primerNum = int.Parse(text);
             int segundoNum = int.Parse(text1);
+            
             LogicaDeNegocio.Metodos.AcomodaNum(primerNum,segundoNum);
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
         {
 
         }
