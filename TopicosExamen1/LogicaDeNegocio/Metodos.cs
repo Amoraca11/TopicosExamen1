@@ -27,7 +27,7 @@ namespace LogicaDeNegocio{
             }
         }
 
-        public static void AcomodaNum( int x, int y)
+        public static int [,] AcomodaNum( int x, int y)
         {
             int valor;
             int inicial;
@@ -98,6 +98,7 @@ namespace LogicaDeNegocio{
 
             }//segundofor
             imprimeMatriz(matriz);
+            return matriz;
         }
         public static void LlenaCartones() {
 

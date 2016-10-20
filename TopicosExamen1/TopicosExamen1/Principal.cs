@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static TopicosExamen1.SolitaDatos;
 using static TopicosExamen1.MenuInicio;
+using LogicaDeNegocio;
 
 namespace TopicosExamen1
 {
@@ -63,18 +64,31 @@ namespace TopicosExamen1
             vista.TabIndex = 0;
             vista.RowHeadersVisible = false;
 
-            int B = 1, I = 6, N = 11, G = 16, O = 21;
+            //int B = 1, I = 6, N = 11, G = 16, O = 21;
 
-            for (int p = 0; p < 5; p++)
-            {
-                string[] row = new string[] { B.ToString(), I.ToString(), N.ToString(), G.ToString(), O.ToString() };
-                vista.Rows.Add(row);
-                B++; I++; N++; G++; O++;
+            //for (int p = 0; p < 5; p++)
+            //{
+            //    string[] row = new string[] { B.ToString(), I.ToString(), N.ToString(), G.ToString(), O.ToString() };
+            //    vista.Rows.Add(row);
+
+            //    B++; I++; N++; G++; O++;
+            //}
+            Carton miCarton=ListaCartones.getCarton(1);
+            int [,] miMatriz= miCarton.getCarton();
+            //int[,] bingMatriz = new int[5,5];
+            //bingMatriz[0, 0] = 0;
+            //vista.Rows[2].Cells[2].Value = "BINGO";
+
+            for (int i = 0; i < miMatriz.GetLength(0); i++) { 
+
+                for (int j = 0; j < miMatriz.GetLength(0); j++) {
+                   vista.Rows.Add(miMatriz[i, j].ToString());
+                   
+               
+
+                }
+
             }
-
-            int[,] bingMatriz = new int[5,5];
-            bingMatriz[0, 0] = 0;
-            vista.Rows[2].Cells[2].Value = "BINGO";
 
             LogicaDeNegocio.Metodos.CartonLetraR(vista);
 
@@ -132,7 +146,7 @@ namespace TopicosExamen1
         private void button1_Click(object sender, EventArgs e)
         {
             //LogicaDeNegocio.Metodos.LlenaCartones();
-            //CreateGrid();
+            CreateGrid();
             //listNumbers.Items.Clear();
             string text = TopicosExamen1.MenuInicio.ControlID.TextData;
             string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
@@ -163,13 +177,7 @@ namespace TopicosExamen1
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            
-            string text = TopicosExamen1.MenuInicio.ControlID.TextData;
-            string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
-            int primerNum = int.Parse(text);
-            int segundoNum = int.Parse(text1);
-            
-            LogicaDeNegocio.Metodos.AcomodaNum(primerNum,segundoNum);
+           
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -179,6 +187,18 @@ namespace TopicosExamen1
 
         private void btnPruebaAcomodaNum_Click(object sender, EventArgs e)
         {
+
+            string text = TopicosExamen1.MenuInicio.ControlID.TextData;
+            string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
+            int primerNum = int.Parse(text);
+            int segundoNum = int.Parse(text1);
+            int id = 1;
+          
+             int [,] Carton1 =LogicaDeNegocio.Metodos.AcomodaNum(primerNum, segundoNum);
+            Carton cartonNuevo = new Carton(id,Carton1);
+            LogicaDeNegocio.ListaCartones.AgregarCarton(cartonNuevo);
+            //Carton Carton2 = LogicaDeNegocio.ListaCartones.getCarton(1);
+            //id++;
 
         }
     }
