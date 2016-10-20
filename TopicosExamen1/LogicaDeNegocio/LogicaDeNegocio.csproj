@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Carton.cs" />
     <Compile Include="ListaCartones.cs" />
+    <Compile Include="ListaUsuarios.cs" />
     <Compile Include="Metodos.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
