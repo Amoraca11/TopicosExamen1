@@ -118,7 +118,7 @@
             this.btnPruebaAcomodaNum.TabIndex = 14;
             this.btnPruebaAcomodaNum.Text = "Prueba AcomodaNum";
             this.btnPruebaAcomodaNum.UseVisualStyleBackColor = true;
-            this.btnPruebaAcomodaNum.Click += new System.EventHandler(this.button2_Click_2);
+            this.btnPruebaAcomodaNum.Click += new System.EventHandler(this.btnPruebaAcomodaNum_Click);
             // 
             // label3
             // 

@@ -177,7 +177,7 @@ namespace TopicosExamen1
 
         }
 
-        private void button2_Click_2(object sender, EventArgs e)
+        private void btnPruebaAcomodaNum_Click(object sender, EventArgs e)
         {
 
         }
