@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static TopicosExamen1.SolitaDatos;
+using static TopicosExamen1.MenuInicio;
 
 namespace TopicosExamen1
 {
@@ -133,8 +134,8 @@ namespace TopicosExamen1
             //LogicaDeNegocio.Metodos.LlenaCartones();
             //CreateGrid();
             //listNumbers.Items.Clear();
-            string text = ControlID.TextData;
-            string text1 = ControlID1.TextData1;
+            string text = TopicosExamen1.MenuInicio.ControlID.TextData;
+            string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
             int primerNum = int.Parse(text);
             int segundoNum = int.Parse(text1);
             listNumbers.Items.Add(LogicaDeNegocio.Metodos.SacaNumeros(primerNum, segundoNum));
@@ -163,8 +164,8 @@ namespace TopicosExamen1
         private void button2_Click_1(object sender, EventArgs e)
         {
             
-            string text = ControlID.TextData;
-            string text1 = ControlID1.TextData1;
+            string text = TopicosExamen1.MenuInicio.ControlID.TextData;
+            string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
             int primerNum = int.Parse(text);
             int segundoNum = int.Parse(text1);
             
