@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static TopicosExamen1.SolitaDatos;
-using static TopicosExamen1.MenuInicio;
 
 namespace TopicosExamen1
 {

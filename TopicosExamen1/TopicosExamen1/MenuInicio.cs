@@ -42,7 +42,6 @@ namespace TopicosExamen1
             frm.Show();
             ControlID.TextData = txtInf.Text;
             ControlID1.TextData1 = txtSup.Text;
-            string modoDeJuego = cmbModo.SelectedItem.ToString();
         }
     }
 }

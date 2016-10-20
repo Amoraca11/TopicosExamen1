@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.tabModalidad = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listNumbers = new System.Windows.Forms.ListBox();
@@ -49,6 +48,7 @@
             this.txtNombreModalidad = new System.Windows.Forms.TextBox();
             this.btnAgregaModalidad = new System.Windows.Forms.Button();
             this.tableNuevoCarton = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabModalidad.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -84,16 +84,6 @@
             this.tabPage1.Text = "Jugar";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(357, 247);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Prueba AcomodaNum";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label3
             // 
@@ -136,9 +126,9 @@
             // btnNewGame
             // 
             this.btnNewGame.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnNewGame.Location = new System.Drawing.Point(373, 86);
+            this.btnNewGame.Location = new System.Drawing.Point(380, 111);
             this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(105, 45);
+            this.btnNewGame.Size = new System.Drawing.Size(105, 23);
             this.btnNewGame.TabIndex = 9;
             this.btnNewGame.Text = "Juego Nuevo";
             this.btnNewGame.UseVisualStyleBackColor = true;
@@ -278,6 +268,16 @@
             this.tableNuevoCarton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableNuevoCarton.Size = new System.Drawing.Size(238, 149);
             this.tableNuevoCarton.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(357, 247);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Prueba AcomodaNum";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Principal
             // 
