@@ -8,7 +8,9 @@ namespace LogicaDeNegocio
 {
     public class Carton
     {
-        int idCarton;
-        int[,] carton = new int[5, 5];
+        public int idCarton { get; set; }
+        public int[,] carton = new int[5, 5];
+
+
     }
 }

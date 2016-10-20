@@ -144,9 +144,9 @@ namespace LogicaDeNegocio{
 
 
         }
-        public static void SacaNumeros(int x, int y)
+        public static string SacaNumeros(int x, int y)
         {
-
+            string result = "";
             Random obj = new Random();
             // int[] array = new int[y];
 
@@ -184,7 +184,8 @@ namespace LogicaDeNegocio{
 
         }
             else { MessageBox.Show("Han salido todos los numeros gracias por jugar");  }
-          
+
+            return result;
            
         }
 
