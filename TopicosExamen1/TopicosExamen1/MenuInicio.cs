@@ -38,10 +38,20 @@ namespace TopicosExamen1
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            Principal frm = new Principal();
-            frm.Show();
-            ControlID.TextData = txtInf.Text;
-            ControlID1.TextData1 = txtSup.Text;
+            int num1 = int.Parse(comboBox1.SelectedItem.ToString());
+            int num2 = int.Parse(comboBox2.SelectedItem.ToString());
+
+            if ( num2-num1 >= 28) {
+                Principal frm = new Principal();
+                frm.Show();
+                ControlID.TextData = comboBox1.SelectedItem.ToString();
+                ControlID1.TextData1 = comboBox2.SelectedItem.ToString();
+            }else
+            {
+                MessageBox.Show("Los parámetros solicitados no cumplen con las restricciones. Asegúrese que hayan almenos 30 números de diferencia entre cada límite");
+            }
+
         }
+
     }
 }
