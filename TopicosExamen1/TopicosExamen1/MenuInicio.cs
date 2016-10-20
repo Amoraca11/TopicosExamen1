@@ -40,7 +40,9 @@ namespace TopicosExamen1
         {
             Principal frm = new Principal();
             frm.Show();
-           
+            ControlID.TextData = comboBox1.SelectedItem.ToString();
+            ControlID1.TextData1 = comboBox2.SelectedItem.ToString();
+
         }
 
     }
