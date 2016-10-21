@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static TopicosExamen1.SolitaDatos;
+using static TopicosExamen1.MenuInicio;
+using LogicaDeNegocio;
 
 namespace TopicosExamen1
 {
@@ -18,6 +20,8 @@ namespace TopicosExamen1
             InitializeComponent();
            // TipoJuego 
         }
+
+        public static DataGridView vista = new DataGridView();
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
@@ -49,8 +53,6 @@ namespace TopicosExamen1
         private void CreateGrid()
         {
 
-            DataGridView vista = new DataGridView();
-
             vista.AllowUserToAddRows = false;
             vista.AllowUserToDeleteRows = false;
             vista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -63,20 +65,48 @@ namespace TopicosExamen1
             vista.TabIndex = 0;
             vista.RowHeadersVisible = false;
 
-            int B = 1, I = 6, N = 11, G = 16, O = 21;
+            string text = TopicosExamen1.MenuInicio.ControlID.TextData;
+            string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
+            int primerNum = int.Parse(text);
+            int segundoNum = int.Parse(text1);
+
+            int[] array = new int[75];
+            Random rdn = new Random();
+            int cont = 0;
 
             for (int p = 0; p < 5; p++)
             {
-                string[] row = new string[] { B.ToString(), I.ToString(), N.ToString(), G.ToString(), O.ToString() };
-                vista.Rows.Add(row);
-                B++; I++; N++; G++; O++;
+                int B = rdn.Next(primerNum, segundoNum);
+                int I = rdn.Next(primerNum, segundoNum);
+                int N = rdn.Next(primerNum, segundoNum);
+                int G = rdn.Next(primerNum, segundoNum);
+                int O = rdn.Next(primerNum, segundoNum);
+
+                //List<int> num = array.ToList();
+                //num.Sort();
+                //array = num.ToArray();
+
+
+                if (array.Contains(B) || array.Contains(I) || array.Contains(N) || array.Contains(G) || array.Contains(O))
+                {
+                    p--; Console.WriteLine("Respido");
+                }
+                else
+                {
+                    string[] row = new string[] { B.ToString(), I.ToString(), N.ToString(), G.ToString(), O.ToString() };
+                    vista.Rows.Add(row);
+                    array[cont] = B; cont++;
+                    array[cont] = I; cont++;
+                    array[cont] = N; cont++;
+                    array[cont] = G; cont++;
+                    array[cont] = O; cont++;
+                    
+                }
             }
 
-            int[,] bingMatriz = new int[5,5];
+            int[,] bingMatriz = new int[5, 5];
             bingMatriz[0, 0] = 0;
             vista.Rows[2].Cells[2].Value = "BINGO";
-
-            LogicaDeNegocio.Metodos.CartonLetraR(vista);
 
             //vista.RowTemplate.MinimumHeight = 175
 
@@ -134,12 +164,13 @@ namespace TopicosExamen1
             //LogicaDeNegocio.Metodos.LlenaCartones();
             //CreateGrid();
             //listNumbers.Items.Clear();
-            string text = ControlID.TextData;
-            string text1 = ControlID1.TextData1;
+            string text = TopicosExamen1.MenuInicio.ControlID.TextData;
+            string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
             int primerNum = int.Parse(text);
             int segundoNum = int.Parse(text1);
             listNumbers.Items.Add(LogicaDeNegocio.Metodos.SacaNumeros(primerNum, segundoNum));
-            
+            LogicaDeNegocio.Metodos.CartonLetraX(vista);
+
 
         }
 
@@ -163,13 +194,7 @@ namespace TopicosExamen1
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            
-            string text = ControlID.TextData;
-            string text1 = ControlID1.TextData1;
-            int primerNum = int.Parse(text);
-            int segundoNum = int.Parse(text1);
-            
-            LogicaDeNegocio.Metodos.AcomodaNum(primerNum,segundoNum);
+           
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -177,8 +202,21 @@ namespace TopicosExamen1
 
         }
 
-        private void button2_Click_2(object sender, EventArgs e)
+        private void btnPruebaAcomodaNum_Click(object sender, EventArgs e)
         {
+
+            string text = TopicosExamen1.MenuInicio.ControlID.TextData;
+            string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
+            int primerNum = int.Parse(text);
+            int segundoNum = int.Parse(text1);
+            int id = 1;
+          
+             int [,] Carton1 =LogicaDeNegocio.Metodos.AcomodaNum(primerNum, segundoNum);
+            Carton cartonNuevo = new Carton(id,Carton1);
+            LogicaDeNegocio.ListaCartones.AgregarCarton(cartonNuevo);
+            //Carton Carton2 = LogicaDeNegocio.ListaCartones.getCarton(1);
+            //id++;
+            CreateGrid();
 
         }
     }

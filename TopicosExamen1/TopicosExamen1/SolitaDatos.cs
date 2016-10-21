@@ -42,8 +42,12 @@ namespace TopicosExamen1
         private void button1_Click(object sender, EventArgs e)
         {
 
-            ControlID.TextData = txtPrimerNum.Text;
-            ControlID1.TextData1 = txtSegundoNum.Text;
+            
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
