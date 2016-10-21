@@ -211,7 +211,7 @@ namespace TopicosExamen1
             int segundoNum = int.Parse(text1);
             int id = 1;
           
-             int [,] Carton1 =LogicaDeNegocio.Metodos.AcomodaNum(primerNum, segundoNum);
+             int [,] Carton1 =LogicaDeNegocio.Metodos.AcomodaNum();
             Carton cartonNuevo = new Carton(id,Carton1);
             LogicaDeNegocio.ListaCartones.AgregarCarton(cartonNuevo);
             //Carton Carton2 = LogicaDeNegocio.ListaCartones.getCarton(1);

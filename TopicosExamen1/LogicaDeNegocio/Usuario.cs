@@ -10,15 +10,15 @@ namespace LogicaDeNegocio
     {
         public int id { get; set; }
         public string nombre { get; set; }
-        public int cantidad { get; set; }
-        public int[,] cartones { get; set; }
-
-        public Usuario(int Id, string nombreU, int Cantidad, int[,] Numcarton)
+       
+        public Usuario(int Id, string nombreU)
         {
             id = Id;
             nombre = nombreU;
-            cantidad = Cantidad;
-            cartones = Numcarton;
+        }
+
+        public Usuario()
+        {
         }
 
         public int getID()
@@ -41,25 +41,6 @@ namespace LogicaDeNegocio
             return this.nombre;
         }
 
-        public int getCantidad()
-        {
-            return this.cantidad;
-        }
-
-        public void setcantidad(int Cantidad)
-        {
-            this.cantidad = Cantidad;
-        }
-
-        public int[,] getCartones()
-        {
-            return this.cartones;
-        }
-
-        public void setCarton(int[,] CartonNum)
-        {
-            this.cartones = CartonNum;
-        }
 
     }
 }
