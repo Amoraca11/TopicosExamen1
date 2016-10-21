@@ -16,6 +16,7 @@ namespace TopicosExamen1
         public Principal()
         {
             InitializeComponent();
+           // TipoJuego 
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)
