@@ -13,6 +13,7 @@ namespace LogicaDeNegocio{
 
         public static int[] arrayNumeros = new int[75];
         public static int cont1 = 0;
+        public static int Salionum = 0;
 
         public static void imprimeMatriz(int [,] matrizPrint ) {
 
@@ -171,6 +172,7 @@ namespace LogicaDeNegocio{
                     result = "El numero que ha salido es " + numerorandom;// solo esto cambie
                 MessageBox.Show(result);
                 cont1++;
+                    Salionum = numerorandom;
 
 
             }  //if
@@ -183,7 +185,8 @@ namespace LogicaDeNegocio{
                     result = "El numero que ha salido es " + numerorandom;
                 MessageBox.Show(result);//yusef: solo modifiue este mensaje
                 cont1++;
-            }
+                    Salionum = numerorandom;
+                }
 
 
 
@@ -238,50 +241,91 @@ namespace LogicaDeNegocio{
 
         public static void Carton4Esquinas(DataGridView matriz)
         {
-            matriz.Rows[0].Cells[0].Style.ForeColor = Color.Red;
-            matriz.Rows[4].Cells[0].Style.ForeColor = Color.Red;
-            matriz.Rows[0].Cells[4].Style.ForeColor = Color.Red;
-            matriz.Rows[4].Cells[4].Style.ForeColor = Color.Red;
+             int cont = 0;
 
-            for (int i = 0; i < 5; i++)
+            if ((Int16.Parse(matriz.Rows[0].Cells[0].Value.ToString())) == Salionum)
             {
-                for (int j = 0; j < 5; j++)
-                {
-                    if (matriz.Rows[i].Cells[j] == matriz.Rows[2].Cells[2])
-                    {
-                        matriz.Rows[2].Cells[2].Value = "BINGO";
-                    }
-                }
-            }            
+                matriz.Rows[0].Cells[0].Style.ForeColor = Color.Red;
+                cont++;
+            }
+            else if((Int16.Parse(matriz.Rows[4].Cells[0].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[4].Cells[0].Style.ForeColor = Color.Red;
+                cont++;
+            }
+            else if ((Int16.Parse(matriz.Rows[0].Cells[4].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[0].Cells[4].Style.ForeColor = Color.Red;
+                cont++;
+            }
+            else if ((Int16.Parse(matriz.Rows[4].Cells[4].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[4].Cells[4].Style.ForeColor = Color.Red;
+                cont++;
+            }
+
+            if(cont == 4)
+            {
+                MessageBox.Show("Felicidades has ganado el juego de 4 esquinas");
+            }
+
+            matriz.Rows[2].Cells[2].Value = "BINGO";
+
+       
 
         }
 
         public static void CartonLetraH(DataGridView matriz)
         {
-            matriz.Rows[0].Cells[0].Style.ForeColor = Color.Red;
-            matriz.Rows[1].Cells[0].Style.ForeColor = Color.Red;
-            matriz.Rows[2].Cells[0].Style.ForeColor = Color.Red;
-            matriz.Rows[3].Cells[0].Style.ForeColor = Color.Red;
-            matriz.Rows[4].Cells[0].Style.ForeColor = Color.Red;
-            matriz.Rows[0].Cells[4].Style.ForeColor = Color.Red;
-            matriz.Rows[1].Cells[4].Style.ForeColor = Color.Red;
-            matriz.Rows[2].Cells[4].Style.ForeColor = Color.Red;
-            matriz.Rows[3].Cells[4].Style.ForeColor = Color.Red;
-            matriz.Rows[4].Cells[4].Style.ForeColor = Color.Red;
-            matriz.Rows[2].Cells[1].Style.ForeColor = Color.Red;
-            matriz.Rows[2].Cells[3].Style.ForeColor = Color.Red;
-
-            for (int i = 0; i < 5; i++)
+            if ((Int16.Parse(matriz.Rows[0].Cells[0].Value.ToString())) == Salionum)
             {
-                for (int j = 0; j < 5; j++)
-                {
-                    if (matriz.Rows[i].Cells[j] == matriz.Rows[2].Cells[2])
-                    {
-                        matriz.Rows[2].Cells[2].Value = "BINGO";
-                        matriz.Rows[2].Cells[2].Style.ForeColor = Color.Red;
-                    }
-                }
+                matriz.Rows[0].Cells[0].Style.ForeColor = Color.Red;
             }
+            else if ((Int16.Parse(matriz.Rows[1].Cells[0].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[1].Cells[0].Style.ForeColor = Color.Red;
+            }
+            else if ((Int16.Parse(matriz.Rows[2].Cells[0].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[2].Cells[0].Style.ForeColor = Color.Red;
+            }
+            else if ((Int16.Parse(matriz.Rows[3].Cells[0].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[3].Cells[0].Style.ForeColor = Color.Red;
+            }
+            else if ((Int16.Parse(matriz.Rows[4].Cells[0].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[4].Cells[0].Style.ForeColor = Color.Red;
+            }
+            else if ((Int16.Parse(matriz.Rows[1].Cells[4].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[1].Cells[4].Style.ForeColor = Color.Red;
+            }
+            else if ((Int16.Parse(matriz.Rows[2].Cells[4].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[2].Cells[4].Style.ForeColor = Color.Red;
+            }
+            else if ((Int16.Parse(matriz.Rows[3].Cells[4].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[3].Cells[4].Style.ForeColor = Color.Red;
+            }
+            else if ((Int16.Parse(matriz.Rows[4].Cells[4].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[4].Cells[4].Style.ForeColor = Color.Red;
+            }
+            else if ((Int16.Parse(matriz.Rows[2].Cells[1].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[2].Cells[1].Style.ForeColor = Color.Red;
+            }
+            else if ((Int16.Parse(matriz.Rows[4].Cells[4].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[2].Cells[3].Style.ForeColor = Color.Red;
+            }
+
+
+           matriz.Rows[2].Cells[2].Value = "BINGO";
+           matriz.Rows[2].Cells[2].Style.ForeColor = Color.Red;
+
 
         }
 

@@ -20,6 +20,8 @@ namespace TopicosExamen1
             InitializeComponent();
         }
 
+        public static DataGridView vista = new DataGridView();
+
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             SolitaDatos frm = new SolitaDatos();
@@ -50,8 +52,6 @@ namespace TopicosExamen1
         private void CreateGrid()
         {
 
-            DataGridView vista = new DataGridView();
-
             vista.AllowUserToAddRows = false;
             vista.AllowUserToDeleteRows = false;
             vista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -64,33 +64,48 @@ namespace TopicosExamen1
             vista.TabIndex = 0;
             vista.RowHeadersVisible = false;
 
-            //int B = 1, I = 6, N = 11, G = 16, O = 21;
+            string text = TopicosExamen1.MenuInicio.ControlID.TextData;
+            string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
+            int primerNum = int.Parse(text);
+            int segundoNum = int.Parse(text1);
 
-            //for (int p = 0; p < 5; p++)
-            //{
-            //    string[] row = new string[] { B.ToString(), I.ToString(), N.ToString(), G.ToString(), O.ToString() };
-            //    vista.Rows.Add(row);
+            int[] array = new int[75];
+            Random rdn = new Random();
+            int cont = 0;
 
-            //    B++; I++; N++; G++; O++;
-            //}
-            Carton miCarton=ListaCartones.getCarton(1);
-            int [,] miMatriz= miCarton.getCarton();
-            //int[,] bingMatriz = new int[5,5];
-            //bingMatriz[0, 0] = 0;
-            //vista.Rows[2].Cells[2].Value = "BINGO";
+            for (int p = 0; p < 5; p++)
+            {
+                int B = rdn.Next(primerNum, segundoNum);
+                int I = rdn.Next(primerNum, segundoNum);
+                int N = rdn.Next(primerNum, segundoNum);
+                int G = rdn.Next(primerNum, segundoNum);
+                int O = rdn.Next(primerNum, segundoNum);
 
-            for (int i = 0; i < miMatriz.GetLength(0); i++) { 
+                //List<int> num = array.ToList();
+                //num.Sort();
+                //array = num.ToArray();
 
-                for (int j = 0; j < miMatriz.GetLength(0); j++) {
-                   vista.Rows.Add(miMatriz[i, j].ToString());
-                   
-               
 
+                if (array.Contains(B) || array.Contains(I) || array.Contains(N) || array.Contains(G) || array.Contains(O))
+                {
+                    p--; Console.WriteLine("Respido");
                 }
-
+                else
+                {
+                    string[] row = new string[] { B.ToString(), I.ToString(), N.ToString(), G.ToString(), O.ToString() };
+                    vista.Rows.Add(row);
+                    array[cont] = B; cont++;
+                    array[cont] = I; cont++;
+                    array[cont] = N; cont++;
+                    array[cont] = G; cont++;
+                    array[cont] = O; cont++;
+                    
+                }
             }
 
-            LogicaDeNegocio.Metodos.CartonLetraR(vista);
+            int[,] bingMatriz = new int[5, 5];
+            bingMatriz[0, 0] = 0;
+            vista.Rows[2].Cells[2].Value = "BINGO";
 
             //vista.RowTemplate.MinimumHeight = 175
 
@@ -146,14 +161,15 @@ namespace TopicosExamen1
         private void button1_Click(object sender, EventArgs e)
         {
             //LogicaDeNegocio.Metodos.LlenaCartones();
-            CreateGrid();
+            //CreateGrid();
             //listNumbers.Items.Clear();
             string text = TopicosExamen1.MenuInicio.ControlID.TextData;
             string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
             int primerNum = int.Parse(text);
             int segundoNum = int.Parse(text1);
             listNumbers.Items.Add(LogicaDeNegocio.Metodos.SacaNumeros(primerNum, segundoNum));
-            
+            LogicaDeNegocio.Metodos.Carton4Esquinas(vista);
+
 
         }
 
@@ -199,6 +215,7 @@ namespace TopicosExamen1
             LogicaDeNegocio.ListaCartones.AgregarCarton(cartonNuevo);
             //Carton Carton2 = LogicaDeNegocio.ListaCartones.getCarton(1);
             //id++;
+            CreateGrid();
 
         }
     }
