@@ -88,7 +88,7 @@
             this.tabModalidad.Location = new System.Drawing.Point(2, 2);
             this.tabModalidad.Name = "tabModalidad";
             this.tabModalidad.SelectedIndex = 0;
-            this.tabModalidad.Size = new System.Drawing.Size(887, 402);
+            this.tabModalidad.Size = new System.Drawing.Size(884, 402);
             this.tabModalidad.TabIndex = 0;
             // 
             // tabPage1
@@ -104,7 +104,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(879, 376);
+            this.tabPage1.Size = new System.Drawing.Size(876, 376);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Jugar";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(879, 376);
+            this.tabPage2.Size = new System.Drawing.Size(633, 376);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Estado";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -275,7 +275,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(879, 376);
+            this.tabPage3.Size = new System.Drawing.Size(876, 376);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Agrega Modalidad";
             this.tabPage3.UseVisualStyleBackColor = true;
