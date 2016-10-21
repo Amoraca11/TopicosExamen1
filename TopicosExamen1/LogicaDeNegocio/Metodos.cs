@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -9,12 +9,18 @@ using System.Windows.Forms;
 namespace LogicaDeNegocio{
 
 
-    public class Metodos{
+    public class Metodos {
 
         public static int[] arrayNumeros = new int[75];
         public static int cont1 = 0;
         public static int Salionum = 0;
-
+        public ArrayList Usuarios = new ArrayList();
+        public ArrayList Cartones = new ArrayList();
+        public ArrayList UsuariosCartones = new ArrayList();
+        public static int num1 = 0;
+        public static int num2 = 0;
+        public int cantidad_Usuarios = 0;
+        public int cantidad_Cartones = 0;
         public static void imprimeMatriz(int [,] matrizPrint ) {
 
 
@@ -28,8 +34,12 @@ namespace LogicaDeNegocio{
             }
         }
 
-        public static int [,] AcomodaNum( int x, int y)
+        public static int [,] AcomodaNum()
         {
+            /* la X y Y que se debia de recibir por parametro ahora estan declaradas 
+            como una variable global para poder acesarlas en cualquier momento */ 
+            int x = num1;
+            int y = num2;
             int valor;
             int inicial;
             int[,] matriz = new int[5, 5];
@@ -589,6 +599,18 @@ namespace LogicaDeNegocio{
                 }
             }
 
+        }
+
+        public void RelacionarCartones(int id_Usuario, int CantidadCartones)
+        {
+            for(int i = 0; i <= CantidadCartones; i++ )
+            {
+                int[,] matriz = AcomodaNum();
+                Cartones.Add(matriz);
+                int [] UsuarioCarton = { id_Usuario, cantidad_Cartones };
+                cantidad_Cartones++;
+                UsuariosCartones.Add(UsuarioCarton);
+            }
         }
 
     }

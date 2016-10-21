@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicaDeNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,8 +42,16 @@ namespace TopicosExamen1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            
+            string nombre = txtNomUsuario.Text;
+            string CantidadCartones = NumCartones.Value.ToString();
+            int Cartones = int.Parse(CantidadCartones);
+            Metodos obj_Metodos = new Metodos();
+            int id = obj_Metodos.cantidad_Usuarios + 1;
+            obj_Metodos.cantidad_Usuarios = id;
+            string id_Usuario = id.ToString();
+            string[] Usuario = { id_Usuario, nombre };
+            obj_Metodos.Usuarios.Add(Usuario);
+            obj_Metodos.RelacionarCartones(id, Cartones); 
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)

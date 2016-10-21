@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicaDeNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +43,9 @@ namespace TopicosExamen1
             int num2 = int.Parse(comboBox2.SelectedItem.ToString());
 
             if ( num2-num1 >= 28) {
+                // se envian a una variable global en Metodos para poder acesarlas despues
+                Metodos.num1 = num1;
+                Metodos.num2 = num2;
                 Principal frm = new Principal();
                 frm.Show();
                 ControlID.TextData = comboBox1.SelectedItem.ToString();
