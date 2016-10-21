@@ -168,7 +168,7 @@ namespace TopicosExamen1
             int primerNum = int.Parse(text);
             int segundoNum = int.Parse(text1);
             listNumbers.Items.Add(LogicaDeNegocio.Metodos.SacaNumeros(primerNum, segundoNum));
-            LogicaDeNegocio.Metodos.Carton4Esquinas(vista);
+            LogicaDeNegocio.Metodos.CartonLetraX(vista);
 
 
         }
