@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicaDeNegocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -13,7 +14,7 @@ namespace BingoWCF
     {
         [OperationContract]
 
-        LogicaDeNegocio.ListaUsuarios getUser(int id);
+        LogicaDeNegocio.Usuario getUser(int id);
     }
 
     

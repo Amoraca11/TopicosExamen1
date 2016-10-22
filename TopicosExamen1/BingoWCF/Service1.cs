@@ -11,9 +11,10 @@ namespace BingoWCF
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class Service1 : IService1
     {
-        public ListaUsuarios getUser(int id)
+        public Usuario getUser(int id)
         {
-            throw new NotImplementedException();
+            Usuario user =ListaUsuarios.getUser(id);
+            return user;
         }
     }
 }
