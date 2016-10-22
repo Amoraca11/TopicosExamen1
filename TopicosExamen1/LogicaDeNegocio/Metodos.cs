@@ -17,11 +17,13 @@ namespace LogicaDeNegocio{
         public ArrayList Usuarios = new ArrayList();
         public ArrayList Cartones = new ArrayList();
         public ArrayList UsuariosCartones = new ArrayList();
+        public static ArrayList juegos = new ArrayList();
         public static int num1 = 0;
         public static int num2 = 0;
         public static int tipoJuego = 0;
         public int cantidad_Usuarios = 0;
         public int cantidad_Cartones = 0;
+
         public static void imprimeMatriz(int[,] matrizPrint) {
 
 
@@ -208,6 +210,7 @@ namespace LogicaDeNegocio{
 
         }
 
+        
         /// <summary>
         /// de mommento solo pinta lo que recibo de la matriz
         /// </summary>
@@ -230,6 +233,52 @@ namespace LogicaDeNegocio{
                     cont++;
                 };
             };
+        }
+            /// <summary>
+            /// Metodo que agrega la nueva modalidad de matriz ya dada ppor defecto
+            /// </summary>
+            /// <param name="nombre"></param>
+            /// <param name="arreglo"></param>
+        public static void AgregaModalidadDos(string nombre, byte[,] arreglo)
+        {
+            TipoJuego modalidad = new TipoJuego(nombre, arreglo);
+            juegos.Add(modalidad);
+        }
+
+        public static void LlenaJuegos() {
+            byte[,] cartonLleno = { { 1, 1, 1, 1, 1 }, { 1, 1, 1, 1, 1 }
+                , {1,1,1,1,1}, {1,1,1,1,1}, { 1,1,1,1,1 } };
+            AgregaModalidadDos("Carton Lleno", cartonLleno);
+            byte[,] cuatroEsquinas = { { 1, 0, 0, 0, 1 }, { 0,0,0,0,0 }
+                , {0,0,1,0,0}, {0,0,0,0,0}, { 1,0,0,0,1 } };
+            AgregaModalidadDos("Cuatro Esquinas", cartonLleno);
+            byte[,] letraH = { { 1, 0, 0, 0, 1 }, { 1,0,0,0,1 }
+                , {1,1,1,1,1}, {1,0,0,0,1}, { 1,0,0,0,1 } };
+            AgregaModalidadDos("Letra H", letraH);
+            byte[,] letraX = { { 1, 0, 0, 0, 1 }, { 0,1,0,1,0 }
+                , {0,0,1,0,0}, {0,1,0,1,0}, { 1,0,0,0,1 } };
+            AgregaModalidadDos("Letra X", letraX);
+            byte[,] letraO = { { 1, 1,1,1,1 }, { 1,0,0,0,1 }
+                , {1,0,1,0,1}, {1,0,0,0,1}, { 1,1,1,1,1 } };
+            AgregaModalidadDos("Letra O ", letraO);
+            byte[,] letraU = { { 1, 0, 0, 0, 1 }, { 1,0,0,0,1 }
+                , {1,0,1,0,1}, {1,0,0,0,1}, { 1,1,1,1,1 } };
+            AgregaModalidadDos("Letra U", letraU);
+            byte[,] letraP = { { 1, 1,1,1, 1 }, { 1,0,0,0,1 }
+                , {1,1,1,1,1}, {1,0,0,0,0}, { 1,0,0,0,0 } };
+            AgregaModalidadDos("Letra P", letraP);
+            byte[,] letraA = { { 0, 0, 1, 0, 0 }, { 0,1,0,1,0 }
+                , {1,1,1,1,1}, {1,0,0,0,1}, { 1,0,0,0,1 } };
+            AgregaModalidadDos("Letra A", letraA);
+            byte[,] letraE = { { 1, 1,1,1,1}, { 1,0,0,0,0 }
+                , {1,1,1,1,1}, {1,0,0,0,0}, { 1,1,1,1,1 } };
+            AgregaModalidadDos("Letra E", letraE);
+            byte[,] letraW = { { 1, 0, 0, 0, 1 }, { 0,0,0,0,0 }
+                , {0,1,1,1,0}, {0,1,0,1,0}, { 0,1,0,1,0 } };
+            AgregaModalidadDos("Letra W", letraW);
+            byte[,] letraR = { { 1,1,1,1,0 }, { 0,0,0,1,0 }
+                , {1,1,1,1,0}, {1,0,0,1,0}, { 1,0,0,0,1 } };
+            AgregaModalidadDos("Letra R", letraR);
         }
 
         public static void AgregaTipo(DataGridView data)

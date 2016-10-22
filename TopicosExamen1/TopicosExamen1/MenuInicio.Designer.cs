@@ -116,6 +116,7 @@
             this.cmbModo.Name = "cmbModo";
             this.cmbModo.Size = new System.Drawing.Size(121, 21);
             this.cmbModo.TabIndex = 8;
+            this.cmbModo.SelectedIndexChanged += new System.EventHandler(this.cmbModo_SelectedIndexChanged);
             // 
             // btnContinuar
             // 
@@ -205,10 +206,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbModo;
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.ComboBox cmbModo;
     }
 }

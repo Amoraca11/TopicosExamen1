@@ -18,10 +18,12 @@ namespace TopicosExamen1
         public Principal()
         {
             InitializeComponent();
-           // TipoJuego 
+            Metodos.LlenaJuegos();
+     
         }
 
         public static DataGridView vista = new DataGridView();
+        //public static Array listaJuegos;
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
@@ -110,9 +112,16 @@ namespace TopicosExamen1
 
         }
 
+        internal void cambiaLbl2(string v)
+        {
+           lblModoJuego.Text= v ;
+        }
+
+        
+
         private void tabPage1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
