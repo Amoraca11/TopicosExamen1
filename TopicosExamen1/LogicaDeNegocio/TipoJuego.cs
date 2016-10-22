@@ -24,7 +24,7 @@ namespace LogicaDeNegocio
             for (int i = 0; i < 5; i++) {
                 for (int j = 0; j < 5; j++) {
                //     var result = matriz[i, j];
-                   Console.Write(result );
+                   //Console.Write(result );
                 }
 
             }
