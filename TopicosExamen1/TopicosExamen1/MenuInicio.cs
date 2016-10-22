@@ -48,11 +48,13 @@ namespace TopicosExamen1
         {
             int num1 = int.Parse(comboBox1.SelectedItem.ToString());
             int num2 = int.Parse(comboBox2.SelectedItem.ToString());
+            int tipoJuego = cmbModo.SelectedIndex;
 
             if ( num2-num1 >= 28) {
                 // se envian a una variable global en Metodos para poder acesarlas despues
                 Metodos.num1 = num1;
                 Metodos.num2 = num2;
+                Metodos.tipoJuego = tipoJuego;
                 Principal frm = new Principal();
                 frm.Show();
                 ControlID.TextData = comboBox1.SelectedItem.ToString();
