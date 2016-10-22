@@ -67,6 +67,8 @@ namespace TopicosExamen1
             LogicaDeNegocio.ListaCartones.AgregarCarton(cartonNuevo);
             Usuario user1 = new Usuario( id,nombre,cartonNuevo);
             ListaUsuarios.listaUsuarios.Add(user1);
+
+            MessageBox.Show("Se creo usuario con exito");
             
         }
 
