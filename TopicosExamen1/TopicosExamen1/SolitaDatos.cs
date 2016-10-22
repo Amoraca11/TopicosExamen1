@@ -62,13 +62,13 @@ namespace TopicosExamen1
             int segundoNum = int.Parse(text1);
             int id1 = 1;
             
-            int[,] Carton1 = LogicaDeNegocio.Metodos.AcomodaNum();
-            Carton cartonNuevo = new Carton(id, Carton1);
-            LogicaDeNegocio.ListaCartones.AgregarCarton(cartonNuevo);
-            Usuario user1 = new Usuario( id,nombre,cartonNuevo);
-            ListaUsuarios.listaUsuarios.Add(user1);
+            //int[,] Carton1 = LogicaDeNegocio.Metodos.AcomodaNum();
+            //Carton cartonNuevo = new Carton(id, Carton1);
+            //LogicaDeNegocio.ListaCartones.AgregarCarton(cartonNuevo);
+            //Usuario user1 = new Usuario( id,nombre,cartonNuevo);
+            //ListaUsuarios.listaUsuarios.Add(user1);
 
-            MessageBox.Show("Se creo usuario con exito");
+            //MessageBox.Show("Se creo usuario con exito");
             
         }
 
