@@ -384,8 +384,6 @@ namespace LogicaDeNegocio{
 
             matriz.Rows[2].Cells[2].Value = "BINGO";
             matriz.Rows[2].Cells[2].Style.ForeColor = Color.Red;
-
-
         }
 
         public static void CartonLetraX(DataGridView matriz)
