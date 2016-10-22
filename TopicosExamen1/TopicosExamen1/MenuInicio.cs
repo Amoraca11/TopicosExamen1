@@ -22,6 +22,13 @@ namespace TopicosExamen1
         {
             public static string TextData { get; set; }
         }
+        public class datoComboBox {
+            public static string dato { get;}
+            public static void setDato() {
+                //  dato= c
+            }
+
+        }
         public static class ControlID1
         {
             public static string TextData1 { get; set; }
@@ -57,5 +64,10 @@ namespace TopicosExamen1
 
         }
 
+        private void cmbModo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Principal ventana = new Principal();
+             ventana.cambiaLbl2(cmbModo.SelectedItem.ToString());
+        }
     }
 }

@@ -74,6 +74,7 @@
             this.txtNombreModalidad = new System.Windows.Forms.TextBox();
             this.btnAgregaModalidad = new System.Windows.Forms.Button();
             this.tableNuevoCarton = new System.Windows.Forms.TableLayoutPanel();
+            this.lblModoJuego = new System.Windows.Forms.Label();
             this.tabModalidad.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -85,7 +86,7 @@
             this.tabModalidad.Controls.Add(this.tabPage1);
             this.tabModalidad.Controls.Add(this.tabPage2);
             this.tabModalidad.Controls.Add(this.tabPage3);
-            this.tabModalidad.Location = new System.Drawing.Point(2, 2);
+            this.tabModalidad.Location = new System.Drawing.Point(2, -6);
             this.tabModalidad.Name = "tabModalidad";
             this.tabModalidad.SelectedIndex = 0;
             this.tabModalidad.Size = new System.Drawing.Size(884, 402);
@@ -93,6 +94,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblModoJuego);
             this.tabPage1.Controls.Add(this.btnPruebaAcomodaNum);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
@@ -199,7 +201,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(633, 376);
+            this.tabPage2.Size = new System.Drawing.Size(876, 376);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Estado";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -507,6 +509,16 @@
             this.tableNuevoCarton.Size = new System.Drawing.Size(238, 152);
             this.tableNuevoCarton.TabIndex = 0;
             // 
+            // lblModoJuego
+            // 
+            this.lblModoJuego.AutoSize = true;
+            this.lblModoJuego.ForeColor = System.Drawing.Color.Maroon;
+            this.lblModoJuego.Location = new System.Drawing.Point(369, 33);
+            this.lblModoJuego.Name = "lblModoJuego";
+            this.lblModoJuego.Size = new System.Drawing.Size(62, 13);
+            this.lblModoJuego.TabIndex = 15;
+            this.lblModoJuego.Text = "   ";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,6 +585,7 @@
         private System.Windows.Forms.TextBox txt21;
         private System.Windows.Forms.TextBox txt20;
         protected System.Windows.Forms.TextBox txt22;
+        public System.Windows.Forms.Label lblModoJuego;
     }
 }
 
