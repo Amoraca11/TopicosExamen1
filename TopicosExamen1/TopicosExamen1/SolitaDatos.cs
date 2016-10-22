@@ -61,7 +61,7 @@ namespace TopicosExamen1
             //int primerNum = int.Parse(text);
             //int segundoNum = int.Parse(text1);
             //int id1 = 1;
-            
+
             //int[,] Carton1 = LogicaDeNegocio.Metodos.AcomodaNum();
             //Carton cartonNuevo = new Carton(id, Carton1);
             //LogicaDeNegocio.ListaCartones.AgregarCarton(cartonNuevo);
@@ -69,7 +69,19 @@ namespace TopicosExamen1
             //ListaUsuarios.listaUsuarios.Add(user1);
 
             //MessageBox.Show("Se creo usuario con exito");
-            
+
+            string nombre = txtNomUsuario.Text;
+            int cartones = Convert.ToInt32(NumCartones.Value);
+
+            int[,] Carton1 = LogicaDeNegocio.Metodos.AcomodaNum();
+            Carton cartonNuevo = new Carton(ListaUsuarios.listaUsuarios.Count, Carton1);
+            LogicaDeNegocio.ListaCartones.AgregarCarton(cartonNuevo);
+            Usuario user1 = new Usuario(ListaUsuarios.listaUsuarios.Count, nombre, cartonNuevo);
+            ListaUsuarios.listaUsuarios.Add(user1);
+
+            MessageBox.Show("Usuario agregado correctamente");
+
+
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
