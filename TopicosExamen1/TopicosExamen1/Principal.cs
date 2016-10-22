@@ -65,43 +65,24 @@ namespace TopicosExamen1
             vista.TabIndex = 0;
             vista.RowHeadersVisible = false;
 
-            string text = TopicosExamen1.MenuInicio.ControlID.TextData;
-            string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
-            int primerNum = int.Parse(text);
-            int segundoNum = int.Parse(text1);
+            Carton nomCarton = ListaCartones.getCarton(1);
+            int[,] Matriz = nomCarton.getCarton();
+            string[] rows = new string[5];
 
-            int[] array = new int[75];
-            Random rdn = new Random();
-            int cont = 0;
-
-            for (int p = 0; p < 5; p++)
+            for (int i = 0; i < 5; i++)
             {
-                int B = rdn.Next(primerNum, segundoNum);
-                int I = rdn.Next(primerNum, segundoNum);
-                int N = rdn.Next(primerNum, segundoNum);
-                int G = rdn.Next(primerNum, segundoNum);
-                int O = rdn.Next(primerNum, segundoNum);
+                rows[i] = "";
+                vista.Rows.Add(rows);
+            }
 
-                //List<int> num = array.ToList();
-                //num.Sort();
-                //array = num.ToArray();
-
-
-                if (array.Contains(B) || array.Contains(I) || array.Contains(N) || array.Contains(G) || array.Contains(O))
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
                 {
-                    p--; Console.WriteLine("Respido");
-                }
-                else
-                {
-                    string[] row = new string[] { B.ToString(), I.ToString(), N.ToString(), G.ToString(), O.ToString() };
-                    vista.Rows.Add(row);
-                    array[cont] = B; cont++;
-                    array[cont] = I; cont++;
-                    array[cont] = N; cont++;
-                    array[cont] = G; cont++;
-                    array[cont] = O; cont++;
                     
+                    vista.Rows[i].Cells[j].Value = Matriz[i, j].ToString();
                 }
+
             }
 
             int[,] bingMatriz = new int[5, 5];
@@ -122,10 +103,10 @@ namespace TopicosExamen1
                 vista.Columns[a].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 vista.Columns[a].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
-
-
-
+            vista.CurrentCell = vista.Rows[2].Cells[2];
+            vista.ClearSelection();
             tabPage2.Controls.Add(vista);
+
 
         }
 
