@@ -114,7 +114,7 @@ namespace TopicosExamen1
 
         internal void cambiaLbl2(string v)
         {
-           lblModoJuego.Text= v ;
+           //lblModoJuego.Text= v ;
         }
 
         

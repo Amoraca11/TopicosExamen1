@@ -20,15 +20,15 @@ namespace LogicaDeNegocio
             nombreJuego = "";
             matriz = new byte[5, 5];
         }
-        public  static void ImrimeJuego() {
-            for (int i = 0; i < 5; i++) {
-                for (int j = 0; j < 5; j++) {
-               //     var result = matriz[i, j];
-                   Console.Write(result );
-                }
-                Console.Write("\n");
-            }
-        }
+        //public  static void ImrimeJuego() {
+        //    for (int i = 0; i < 5; i++) {
+        //        for (int j = 0; j < 5; j++) {
+        //       //     var result = matriz[i, j];
+        //           Console.Write(result );
+        //        }
+        //        Console.Write("\n");
+        //    }
+        //}
 
 
 

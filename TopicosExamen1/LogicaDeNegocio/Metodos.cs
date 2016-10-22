@@ -353,12 +353,13 @@ namespace LogicaDeNegocio{
 
             if(cont == 24)
             {
-                MessageBox.Show("Juego terminado");
+                MessageBox.Show("El Juego a terminado, gracias por jugar");
             }
         }
 
         public static void Carton4Esquinas(DataGridView matriz)
         {
+            int cont = 0;
 
             if ((Int16.Parse(matriz.Rows[0].Cells[0].Value.ToString())) == Salionum)
             {
@@ -378,6 +379,13 @@ namespace LogicaDeNegocio{
             }
 
             matriz.Rows[2].Cells[2].Value = "BINGO";
+
+            if (matriz.Rows[0].Cells[0].Style.ForeColor == Color.Red && matriz.Rows[4].Cells[0].Style.ForeColor == Color.Red &&
+                matriz.Rows[0].Cells[4].Style.ForeColor == Color.Red && matriz.Rows[4].Cells[4].Style.ForeColor == Color.Red)
+            {
+                MessageBox.Show("El Juego a terminado, gracias por jugar");
+            }
+
         }
 
         public static void CartonLetraH(DataGridView matriz)
@@ -402,6 +410,10 @@ namespace LogicaDeNegocio{
             {
                 matriz.Rows[4].Cells[0].Style.ForeColor = Color.Red;
             }
+            else if ((Int16.Parse(matriz.Rows[0].Cells[4].Value.ToString())) == Salionum)
+            {
+                matriz.Rows[0].Cells[4].Style.ForeColor = Color.Red;
+            }
             else if ((Int16.Parse(matriz.Rows[1].Cells[4].Value.ToString())) == Salionum)
             {
                 matriz.Rows[1].Cells[4].Style.ForeColor = Color.Red;
@@ -425,6 +437,16 @@ namespace LogicaDeNegocio{
             else if ((Int16.Parse(matriz.Rows[2].Cells[3].Value.ToString())) == Salionum)
             {
                 matriz.Rows[2].Cells[3].Style.ForeColor = Color.Red;
+            }
+
+            if (matriz.Rows[0].Cells[0].Style.ForeColor == Color.Red && matriz.Rows[1].Cells[0].Style.ForeColor == Color.Red &&
+                matriz.Rows[2].Cells[0].Style.ForeColor == Color.Red && matriz.Rows[3].Cells[0].Style.ForeColor == Color.Red &&
+                matriz.Rows[4].Cells[0].Style.ForeColor == Color.Red && matriz.Rows[1].Cells[4].Style.ForeColor == Color.Red &&
+                matriz.Rows[2].Cells[4].Style.ForeColor == Color.Red && matriz.Rows[3].Cells[4].Style.ForeColor == Color.Red &&
+                matriz.Rows[4].Cells[4].Style.ForeColor == Color.Red && matriz.Rows[2].Cells[1].Style.ForeColor == Color.Red &&
+                matriz.Rows[4].Cells[4].Style.ForeColor == Color.Red && matriz.Rows[0].Cells[4].Style.ForeColor == Color.Red)
+            {
+                MessageBox.Show("El Juego a terminado, gracias por jugar");
             }
 
 
@@ -466,6 +488,14 @@ namespace LogicaDeNegocio{
             else if ((Int16.Parse(matriz.Rows[3].Cells[1].Value.ToString())) == Salionum)
             {
                 matriz.Rows[3].Cells[1].Style.ForeColor = Color.Red;
+            }
+
+            if (matriz.Rows[0].Cells[0].Style.ForeColor == Color.Red && matriz.Rows[4].Cells[0].Style.ForeColor == Color.Red &&
+                matriz.Rows[0].Cells[4].Style.ForeColor == Color.Red && matriz.Rows[4].Cells[4].Style.ForeColor == Color.Red &&
+                matriz.Rows[1].Cells[1].Style.ForeColor == Color.Red && matriz.Rows[1].Cells[3].Style.ForeColor == Color.Red &&
+                matriz.Rows[3].Cells[3].Style.ForeColor == Color.Red && matriz.Rows[3].Cells[1].Style.ForeColor == Color.Red)
+            {
+                MessageBox.Show("El Juego a terminado, gracias por jugar");
             }
 
             matriz.Rows[2].Cells[2].Value = "BINGO";
