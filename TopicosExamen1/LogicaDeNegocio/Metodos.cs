@@ -37,6 +37,7 @@ namespace LogicaDeNegocio{
             }
         }
 
+
         public static int[,] AcomodaNum()
         {
             /* la X y Y que se debia de recibir por parametro ahora estan declaradas 

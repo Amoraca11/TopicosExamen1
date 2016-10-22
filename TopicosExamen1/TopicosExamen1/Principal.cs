@@ -19,6 +19,7 @@ namespace TopicosExamen1
         {
             InitializeComponent();
             Metodos.LlenaJuegos();
+            
      
         }
 
