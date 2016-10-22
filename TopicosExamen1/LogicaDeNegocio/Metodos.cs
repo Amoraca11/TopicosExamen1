@@ -19,6 +19,7 @@ namespace LogicaDeNegocio{
         public ArrayList UsuariosCartones = new ArrayList();
         public static int num1 = 0;
         public static int num2 = 0;
+        public static int tipoJuego = 0;
         public int cantidad_Usuarios = 0;
         public int cantidad_Cartones = 0;
         public static void imprimeMatriz(int[,] matrizPrint) {
@@ -231,6 +232,47 @@ namespace LogicaDeNegocio{
             };
         }
 
+        public static void AgregaTipo(DataGridView data)
+        {
+            switch (tipoJuego)
+            {
+                case 0:
+                    CartonLleno(data);
+                    break;
+                case 1:
+                    Carton4Esquinas(data);
+                    break;
+                case 2:
+                    CartonLetraH(data);
+                    break;
+                case 3:
+                    CartonLetraX(data);
+                    break;
+                case 4:
+                    CartonLetraO(data);
+                    break;
+                case 5:
+                    CartonLetraU(data);
+                    break;
+                case 6:
+                    CartonLetraP(data);
+                    break;
+                case 7:
+                    CartonLetraA(data);
+                    break;
+                case 8:
+                    CartonLetraE(data);
+                    break;
+                case 9:
+                    CartonLetraW(data);
+                    break;
+                case 10:
+                    CartonLetraR(data);
+                    break;
+            } 
+
+        }
+
         public static void CartonLleno(DataGridView matriz)
         {
             for (int i = 0; i < 5; i++)
@@ -241,7 +283,7 @@ namespace LogicaDeNegocio{
                     {
                         matriz.Rows[2].Cells[2].Value = "BINGO";
                     }
-                    else
+                    else if((Int16.Parse(matriz.Rows[i].Cells[j].Value.ToString())) == Salionum)
                     {
                         matriz.Rows[i].Cells[j].Style.ForeColor = Color.Red;
                     }
@@ -251,38 +293,25 @@ namespace LogicaDeNegocio{
 
         public static void Carton4Esquinas(DataGridView matriz)
         {
-            int cont = 0;
 
             if ((Int16.Parse(matriz.Rows[0].Cells[0].Value.ToString())) == Salionum)
             {
                 matriz.Rows[0].Cells[0].Style.ForeColor = Color.Red;
-                cont++;
             }
             else if ((Int16.Parse(matriz.Rows[4].Cells[0].Value.ToString())) == Salionum)
             {
                 matriz.Rows[4].Cells[0].Style.ForeColor = Color.Red;
-                cont++;
             }
             else if ((Int16.Parse(matriz.Rows[0].Cells[4].Value.ToString())) == Salionum)
             {
                 matriz.Rows[0].Cells[4].Style.ForeColor = Color.Red;
-                cont++;
             }
             else if ((Int16.Parse(matriz.Rows[4].Cells[4].Value.ToString())) == Salionum)
             {
                 matriz.Rows[4].Cells[4].Style.ForeColor = Color.Red;
-                cont++;
-            }
-
-            if (cont == 4)
-            {
-                MessageBox.Show("Felicidades has ganado el juego de 4 esquinas");
             }
 
             matriz.Rows[2].Cells[2].Value = "BINGO";
-
-
-
         }
 
         public static void CartonLetraH(DataGridView matriz)
