@@ -275,6 +275,7 @@ namespace LogicaDeNegocio{
 
         public static void CartonLleno(DataGridView matriz)
         {
+            int cont = 0;
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
@@ -283,11 +284,27 @@ namespace LogicaDeNegocio{
                     {
                         matriz.Rows[2].Cells[2].Value = "BINGO";
                     }
-                    else if((Int16.Parse(matriz.Rows[i].Cells[j].Value.ToString())) == Salionum)
+                    else if ((Int16.Parse(matriz.Rows[i].Cells[j].Value.ToString())) == Salionum)
                     {
                         matriz.Rows[i].Cells[j].Style.ForeColor = Color.Red;
                     }
                 }
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if(matriz.Rows[i].Cells[j].Style.ForeColor == Color.Red)
+                    {
+                        cont++;
+                    }
+                }
+            }
+
+            if(cont == 24)
+            {
+                MessageBox.Show("Juego terminado");
             }
         }
 
