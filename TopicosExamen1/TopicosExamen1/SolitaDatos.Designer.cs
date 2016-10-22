@@ -30,11 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNomUsuario = new System.Windows.Forms.TextBox();
             this.btnAgrearU = new System.Windows.Forms.Button();
             this.btnCancelarU = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.NumCartones = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.NumCartones)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,12 +57,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Cartones";
             // 
-            // textBox1
+            // txtNomUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(80, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtNomUsuario.Location = new System.Drawing.Point(80, 64);
+            this.txtNomUsuario.Name = "txtNomUsuario";
+            this.txtNomUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtNomUsuario.TabIndex = 5;
             // 
             // btnAgrearU
             // 
@@ -84,28 +84,28 @@
             this.btnCancelarU.UseVisualStyleBackColor = true;
             this.btnCancelarU.Click += new System.EventHandler(this.button2_Click);
             // 
-            // numericUpDown1
+            // NumCartones
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(308, 65);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
-            this.numericUpDown1.TabIndex = 10;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.NumCartones.Location = new System.Drawing.Point(308, 65);
+            this.NumCartones.Name = "NumCartones";
+            this.NumCartones.Size = new System.Drawing.Size(100, 20);
+            this.NumCartones.TabIndex = 10;
+            this.NumCartones.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // SolitaDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 189);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.NumCartones);
             this.Controls.Add(this.btnCancelarU);
             this.Controls.Add(this.btnAgrearU);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNomUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SolitaDatos";
             this.Text = "SolitaDatos";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumCartones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,9 +115,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomUsuario;
         private System.Windows.Forms.Button btnAgrearU;
         private System.Windows.Forms.Button btnCancelarU;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown NumCartones;
     }
 }

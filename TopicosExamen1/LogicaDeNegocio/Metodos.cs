@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -9,27 +9,37 @@ using System.Windows.Forms;
 namespace LogicaDeNegocio{
 
 
-    public class Metodos{
+    public class Metodos {
 
         public static int[] arrayNumeros = new int[75];
         public static int cont1 = 0;
         public static int Salionum = 0;
-
-        public static void imprimeMatriz(int [,] matrizPrint ) {
+        public ArrayList Usuarios = new ArrayList();
+        public ArrayList Cartones = new ArrayList();
+        public ArrayList UsuariosCartones = new ArrayList();
+        public static int num1 = 0;
+        public static int num2 = 0;
+        public int cantidad_Usuarios = 0;
+        public int cantidad_Cartones = 0;
+        public static void imprimeMatriz(int[,] matrizPrint) {
 
 
             for (int i = 0; i < matrizPrint.GetLength(0); i++)
             {
                 for (int j = 0; j < matrizPrint.GetLength(0); j++)
                 {
-                    Console.Write( matrizPrint[i, j].ToString()+" ");
+                    Console.Write(matrizPrint[i, j].ToString() + " ");
                 }
                 Console.WriteLine("");
             }
         }
 
-        public static int [,] AcomodaNum( int x, int y)
+        public static int[,] AcomodaNum()
         {
+            /* la X y Y que se debia de recibir por parametro ahora estan declaradas 
+            como una variable global para poder acesarlas en cualquier momento */
+            int x = num1;
+            int y = num2;
             int valor;
             int inicial;
             int[,] matriz = new int[5, 5];
@@ -42,34 +52,34 @@ namespace LogicaDeNegocio{
 
 
             if (x != 1)
-           {
+            {
                 inicial = (y - x) / 5;
-                valor = x+inicial;
+                valor = x + inicial;
                 mas1 = true;
-                
+
 
             }
             else
             {
-                 valor = y / 5;
-                 inicial = y / 5;
+                valor = y / 5;
+                inicial = y / 5;
             }
-            
+
 
             for (i = 0; i < matriz.GetLength(0); i++)
             {
-                for ( j = 0; j < matriz.GetLength(0); j++)
+                for (j = 0; j < matriz.GetLength(0); j++)
                 {
-                    int numerorandom = obj.Next(x, valor+1);
+                    int numerorandom = obj.Next(x, valor + 1);
                     if (array.Contains(numerorandom))
                     {
 
-                        numerorandom = obj.Next(x,valor+1);
+                        numerorandom = obj.Next(x, valor + 1);
 
                         while (array.Contains(numerorandom))
                         {
 
-                            numerorandom = obj.Next(x, valor+1);
+                            numerorandom = obj.Next(x, valor + 1);
                         }
                         matriz[j, i] = numerorandom;//asignado valores aleatorios entre 1 y 100
                         array[cont] = numerorandom;
@@ -95,7 +105,7 @@ namespace LogicaDeNegocio{
                 }
                 x = x + inicial;
                 valor = valor + inicial;
-             
+
 
             }//segundofor
             imprimeMatriz(matriz);
@@ -103,12 +113,12 @@ namespace LogicaDeNegocio{
         }
         public static void LlenaCartones() {
 
-            int [,] matriz = new int[5, 5];
+            int[,] matriz = new int[5, 5];
             Random obj = new Random();
             int[] array = new int[30];
             int cont = 0;
 
-            for (int i = 0; i < matriz.GetLength(0); i++){//apertura for1
+            for (int i = 0; i < matriz.GetLength(0); i++) {//apertura for1
 
                 for (int j = 0; j < matriz.GetLength(1); j++) {//apertura for interno
                     int numerorandom = obj.Next(1, 35);
@@ -136,11 +146,11 @@ namespace LogicaDeNegocio{
                         cont++;
                     }
 
-                
 
 
 
-                    }//cierre for interno
+
+                }//cierre for interno
             }//cierre for1
 
 
@@ -153,48 +163,48 @@ namespace LogicaDeNegocio{
             Random obj = new Random();
             // int[] array = new int[y];
 
-            if(cont1< y){ 
+            if (cont1 < y) {
 
-            int numerorandom = obj.Next(x, y + 1);
+                int numerorandom = obj.Next(x, y + 1);
 
-            if (arrayNumeros.Contains(numerorandom))
-            {
-
-                numerorandom = obj.Next(x, y + 1);
-                while (arrayNumeros.Contains(numerorandom))
+                if (arrayNumeros.Contains(numerorandom))
                 {
 
                     numerorandom = obj.Next(x, y + 1);
-                }
-                arrayNumeros[cont1] = numerorandom;
+                    while (arrayNumeros.Contains(numerorandom))
+                    {
+
+                        numerorandom = obj.Next(x, y + 1);
+                    }
+                    arrayNumeros[cont1] = numerorandom;
                     // Console.WriteLine("El numero que ha salido es " + numerorandom);
                     //yusef
                     result = "El numero que ha salido es " + numerorandom;// solo esto cambie
-                MessageBox.Show(result);
-                cont1++;
+                    MessageBox.Show(result);
+                    cont1++;
                     Salionum = numerorandom;
 
 
-            }  //if
+                }  //if
 
-            else if (!arrayNumeros.Contains(numerorandom))
-            {
+                else if (!arrayNumeros.Contains(numerorandom))
+                {
 
-                arrayNumeros[cont1] = numerorandom;
+                    arrayNumeros[cont1] = numerorandom;
                     // Console.WriteLine("El numero que ha salido es " + numerorandom);
                     result = "El numero que ha salido es " + numerorandom;
-                MessageBox.Show(result);//yusef: solo modifiue este mensaje
-                cont1++;
+                    MessageBox.Show(result);//yusef: solo modifiue este mensaje
+                    cont1++;
                     Salionum = numerorandom;
                 }
 
 
 
-        }
-            else { MessageBox.Show("Han salido todos los numeros gracias por jugar");  }
+            }
+            else { MessageBox.Show("Han salido todos los numeros gracias por jugar"); }
 
             return result;
-           
+
         }
 
         /// <summary>
@@ -212,7 +222,7 @@ namespace LogicaDeNegocio{
                 for (int l = 0; l < 5; l++)
                 {
 
-                   if (String.IsNullOrEmpty(arreglo[cont].ToString()))
+                    if (String.IsNullOrEmpty(arreglo[cont].ToString()))
                         matriz[i, l] = 0;
                     else
                         matriz[i, l] = 1;
@@ -223,11 +233,11 @@ namespace LogicaDeNegocio{
 
         public static void CartonLleno(DataGridView matriz)
         {
-            for(int i = 0; i<5; i++)
+            for (int i = 0; i < 5; i++)
             {
-                for(int j=0; j < 5; j++)
+                for (int j = 0; j < 5; j++)
                 {
-                    if (matriz.Rows[i].Cells[j]==matriz.Rows[2].Cells[2])
+                    if (matriz.Rows[i].Cells[j] == matriz.Rows[2].Cells[2])
                     {
                         matriz.Rows[2].Cells[2].Value = "BINGO";
                     }
@@ -241,14 +251,14 @@ namespace LogicaDeNegocio{
 
         public static void Carton4Esquinas(DataGridView matriz)
         {
-             int cont = 0;
+            int cont = 0;
 
             if ((Int16.Parse(matriz.Rows[0].Cells[0].Value.ToString())) == Salionum)
             {
                 matriz.Rows[0].Cells[0].Style.ForeColor = Color.Red;
                 cont++;
             }
-            else if((Int16.Parse(matriz.Rows[4].Cells[0].Value.ToString())) == Salionum)
+            else if ((Int16.Parse(matriz.Rows[4].Cells[0].Value.ToString())) == Salionum)
             {
                 matriz.Rows[4].Cells[0].Style.ForeColor = Color.Red;
                 cont++;
@@ -264,14 +274,14 @@ namespace LogicaDeNegocio{
                 cont++;
             }
 
-            if(cont == 4)
+            if (cont == 4)
             {
                 MessageBox.Show("Felicidades has ganado el juego de 4 esquinas");
             }
 
             matriz.Rows[2].Cells[2].Value = "BINGO";
 
-       
+
 
         }
 
@@ -323,8 +333,8 @@ namespace LogicaDeNegocio{
             }
 
 
-           matriz.Rows[2].Cells[2].Value = "BINGO";
-           matriz.Rows[2].Cells[2].Style.ForeColor = Color.Red;
+            matriz.Rows[2].Cells[2].Value = "BINGO";
+            matriz.Rows[2].Cells[2].Style.ForeColor = Color.Red;
 
 
         }
@@ -589,6 +599,54 @@ namespace LogicaDeNegocio{
                 }
             }
 
+        }
+
+        public void RelacionarCartones(int id_Usuario, int CantidadCartones)
+        {
+            for (int i = 0; i <= CantidadCartones; i++)
+            {
+                Boolean creado = false;
+                int[,] matriz;
+                while (creado == false)
+                {
+                    matriz = AcomodaNum();
+                    Boolean igual = comparaMatriz(matriz);
+                    if(igual == false)
+                    {
+                        Cartones.Add(matriz);
+                        creado = true;
+                    }
+                }
+                int [] UsuarioCarton = { id_Usuario, cantidad_Cartones };
+                cantidad_Cartones++;
+                UsuariosCartones.Add(UsuarioCarton);
+            }
+        }
+
+        public Boolean  comparaMatriz(int [,]  matrizNueva) {
+
+            bool igual = true;
+            if (Cartones.Count == 0)
+            {
+                igual = false;
+            }
+            else {
+                foreach(int [,] martrizVieja in Cartones)
+                {
+                    for (int j = 0; j <= 4; j++)
+                    {
+                        for(int k = 0; k <= 4; k++)
+                        {
+                            if(matrizNueva[j,k] != martrizVieja[j, k])
+                            {
+                                igual = false;
+                            }
+                        }
+                    }
+                }
+
+            }
+            return igual;
         }
 
     }
