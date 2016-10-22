@@ -223,6 +223,7 @@
             this.comboUsuario.Name = "comboUsuario";
             this.comboUsuario.Size = new System.Drawing.Size(121, 21);
             this.comboUsuario.TabIndex = 5;
+            this.comboUsuario.SelectedIndexChanged += new System.EventHandler(this.comboUsuario_SelectedIndexChanged);
             // 
             // comboNum
             // 

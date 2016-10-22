@@ -210,5 +210,10 @@ namespace TopicosExamen1
             CreateGrid();
 
         }
+
+        private void comboUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

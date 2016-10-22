@@ -11,9 +11,11 @@ namespace BingoWCF
     [ServiceContract]
     public interface IService1
     {
-       
+        [OperationContract]
+
+        LogicaDeNegocio.ListaUsuarios getUser(int id);
     }
 
-   
+    
     
 }
