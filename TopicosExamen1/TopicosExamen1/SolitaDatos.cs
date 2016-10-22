@@ -53,33 +53,22 @@ namespace TopicosExamen1
             //string[] Usuario = { id_Usuario, nombre };
             //obj_Metodos.Usuarios.Add(Usuario);
             //obj_Metodos.RelacionarCartones(id, Cartones); 
-            //string nombre = txtNomUsuario.Text;
-            //int id = 1;
-            //int cartones = Convert.ToInt32(NumCartones.Value);
-            //string text = TopicosExamen1.MenuInicio.ControlID.TextData;
-            //string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
-            //int primerNum = int.Parse(text);
-            //int segundoNum = int.Parse(text1);
-            //int id1 = 1;
-
-            //int[,] Carton1 = LogicaDeNegocio.Metodos.AcomodaNum();
-            //Carton cartonNuevo = new Carton(id, Carton1);
-            //LogicaDeNegocio.ListaCartones.AgregarCarton(cartonNuevo);
-            //Usuario user1 = new Usuario( id,nombre,cartonNuevo);
-            //ListaUsuarios.listaUsuarios.Add(user1);
-
-            //MessageBox.Show("Se creo usuario con exito");
-
             string nombre = txtNomUsuario.Text;
+            int id = 1;
             int cartones = Convert.ToInt32(NumCartones.Value);
+            string text = TopicosExamen1.MenuInicio.ControlID.TextData;
+            string text1 = TopicosExamen1.MenuInicio.ControlID1.TextData1;
+            int primerNum = int.Parse(text);
+            int segundoNum = int.Parse(text1);
+            int id1 = 1;
 
             int[,] Carton1 = LogicaDeNegocio.Metodos.AcomodaNum();
-            Carton cartonNuevo = new Carton(ListaUsuarios.listaUsuarios.Count, Carton1);
+            Carton cartonNuevo = new Carton(id, Carton1);
             LogicaDeNegocio.ListaCartones.AgregarCarton(cartonNuevo);
-            Usuario user1 = new Usuario(ListaUsuarios.listaUsuarios.Count, nombre, cartonNuevo);
+            Usuario user1 = new Usuario(id, nombre, cartonNuevo);
             ListaUsuarios.listaUsuarios.Add(user1);
 
-            MessageBox.Show("Usuario agregado correctamente");
+            MessageBox.Show("Se creo usuario con exito");
 
 
         }
