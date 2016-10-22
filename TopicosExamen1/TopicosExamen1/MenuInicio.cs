@@ -16,11 +16,21 @@ namespace TopicosExamen1
         public MenuInicio()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+            cmbModo.SelectedIndex = 0;
         }
 
         public static class ControlID
         {
             public static string TextData { get; set; }
+        }
+        public class datoComboBox {
+            public static string dato { get;}
+            public static void setDato() {
+                //  dato= c
+            }
+
         }
         public static class ControlID1
         {
@@ -39,23 +49,34 @@ namespace TopicosExamen1
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            int num1 = int.Parse(comboBox1.SelectedItem.ToString());
-            int num2 = int.Parse(comboBox2.SelectedItem.ToString());
+            
+                int num1 = int.Parse(comboBox1.SelectedItem.ToString());
+                int num2 = int.Parse(comboBox2.SelectedItem.ToString());
+                int tipoJuego = cmbModo.SelectedIndex;
 
-            if ( num2-num1 >= 28) {
-                // se envian a una variable global en Metodos para poder acesarlas despues
-                Metodos.num1 = num1;
-                Metodos.num2 = num2;
-                Principal frm = new Principal();
-                frm.Show();
-                ControlID.TextData = comboBox1.SelectedItem.ToString();
-                ControlID1.TextData1 = comboBox2.SelectedItem.ToString();
-            }else
-            {
-                MessageBox.Show("Los parámetros solicitados no cumplen con las restricciones. Asegúrese que hayan almenos 30 números de diferencia entre cada límite");
-            }
+                if (num2 - num1 >= 28)
+                {
+                    // se envian a una variable global en Metodos para poder acesarlas despues
+                    Metodos.num1 = num1;
+                    Metodos.num2 = num2;
+                    Metodos.tipoJuego = tipoJuego;
+                    Principal frm = new Principal();
+                    frm.Show();
+                    ControlID.TextData = comboBox1.SelectedItem.ToString();
+                    ControlID1.TextData1 = comboBox2.SelectedItem.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Los parámetros solicitados no cumplen con las restricciones. Asegúrese que hayan almenos 30 números de diferencia entre cada límite");
+                }
+
 
         }
 
+        private void cmbModo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Principal ventana = new Principal();
+             ventana.cambiaLbl2(cmbModo.SelectedItem.ToString());
+        }
     }
 }

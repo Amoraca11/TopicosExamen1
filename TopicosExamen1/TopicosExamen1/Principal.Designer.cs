@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.tabModalidad = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblModoJuego = new System.Windows.Forms.Label();
             this.btnPruebaAcomodaNum = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,8 +41,8 @@
             this.btnGeneraNum = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboUsuario = new System.Windows.Forms.ComboBox();
+            this.comboNum = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -85,7 +86,7 @@
             this.tabModalidad.Controls.Add(this.tabPage1);
             this.tabModalidad.Controls.Add(this.tabPage2);
             this.tabModalidad.Controls.Add(this.tabPage3);
-            this.tabModalidad.Location = new System.Drawing.Point(2, 2);
+            this.tabModalidad.Location = new System.Drawing.Point(2, -6);
             this.tabModalidad.Name = "tabModalidad";
             this.tabModalidad.SelectedIndex = 0;
             this.tabModalidad.Size = new System.Drawing.Size(884, 402);
@@ -93,6 +94,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblModoJuego);
             this.tabPage1.Controls.Add(this.btnPruebaAcomodaNum);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
@@ -109,6 +111,16 @@
             this.tabPage1.Text = "Jugar";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // lblModoJuego
+            // 
+            this.lblModoJuego.AutoSize = true;
+            this.lblModoJuego.ForeColor = System.Drawing.Color.Maroon;
+            this.lblModoJuego.Location = new System.Drawing.Point(369, 33);
+            this.lblModoJuego.Name = "lblModoJuego";
+            this.lblModoJuego.Size = new System.Drawing.Size(16, 13);
+            this.lblModoJuego.TabIndex = 15;
+            this.lblModoJuego.Text = "   ";
             // 
             // btnPruebaAcomodaNum
             // 
@@ -192,33 +204,33 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox2);
-            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.comboUsuario);
+            this.tabPage2.Controls.Add(this.comboNum);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(633, 376);
+            this.tabPage2.Size = new System.Drawing.Size(876, 376);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Estado";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // comboUsuario
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(126, 101);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 5;
+            this.comboUsuario.FormattingEnabled = true;
+            this.comboUsuario.Location = new System.Drawing.Point(126, 101);
+            this.comboUsuario.Name = "comboUsuario";
+            this.comboUsuario.Size = new System.Drawing.Size(121, 21);
+            this.comboUsuario.TabIndex = 5;
             // 
-            // comboBox1
+            // comboNum
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(126, 174);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
+            this.comboNum.FormattingEnabled = true;
+            this.comboNum.Location = new System.Drawing.Point(126, 174);
+            this.comboNum.Name = "comboNum";
+            this.comboNum.Size = new System.Drawing.Size(121, 21);
+            this.comboNum.TabIndex = 4;
             // 
             // label6
             // 
@@ -539,9 +551,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboNum;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboUsuario;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TableLayoutPanel tableNuevoCarton;
         private System.Windows.Forms.Label label11;
@@ -573,6 +585,7 @@
         private System.Windows.Forms.TextBox txt21;
         private System.Windows.Forms.TextBox txt20;
         protected System.Windows.Forms.TextBox txt22;
+        public System.Windows.Forms.Label lblModoJuego;
     }
 }
 
